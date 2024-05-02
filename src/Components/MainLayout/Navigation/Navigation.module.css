@@ -1,0 +1,150 @@
+
+
+
+ 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Pattaya&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --main-font: "Inter";
+    --main-color: rgba(0, 0, 0, 0.863);
+    --logo-color1: rgb(36, 117, 54);
+    --logo-color2: rgb(128, 181, 24);
+    --account-color: rgb(14, 172, 159);
+}
+
+
+
+.Navigation_Styles{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5px 60px;
+background-color: rgb(243, 243, 243);
+color: var(--main-color);
+}
+
+.logo{
+font-family: "Pattaya", sans-serif;
+font-weight: 400;
+font-size: 40px;
+color: var(--logo-color1);
+letter-spacing: .4px;
+text-decoration: none;
+}
+
+.logo a{
+text-decoration: none;
+color: inherit;
+}
+
+.logo span{
+color: var(--logo-color2);
+}
+
+
+/*Menu css start*/
+
+.menu{
+position: relative;
+display: flex;
+gap: 30px;
+}
+.menu a{
+position: relative;
+text-decoration: none;
+color: var(--main-color);
+font-size: 17px;
+font-family: Inter;
+font-weight: 500;
+transition: .5s;
+}
+
+.menu a::before{
+content: "";
+position: absolute;
+bottom: -3px;
+right: 0px;
+width: 0%;
+height: 2px;
+background-color: rgba(29, 49, 42, 0.432);
+transition: all .5s ease;
+}
+
+.menu a:hover::before{
+width: 100%;
+}
+
+.menu a:nth-child(5){
+margin-left: 100px;
+color: var(--account-color);
+}
+
+.menu a:nth-child(6){
+color: var(--account-color);
+}
+
+.menu a:active{
+color: green;
+}
+
+.menu a:hover{
+color: green;
+}
+
+/*Menu css end*/
+
+
+/*navBtn css start*/
+
+.navBtn{
+display: none;
+border: none;
+outline: none;
+font-size: 20px;
+color: var(--account-color);
+
+}
+
+/*navBtn css end*/
+
+/*Responsive css start*/
+
+@media only screen and (max-width: 1024px){
+
+.Navigation_Styles{
+  padding: 0px 10px;
+}
+
+.menu {
+  position: fixed;
+    top: 65px;
+    right: 0;
+    height: 300px;
+    width: 270px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 1s;
+    transform: translateX(100%);
+    margin-top: 67px;
+    background-color: rgb(243, 243, 243);
+}
+
+.menu a:nth-child(5){
+  margin-left: 0px;
+  }
+
+.responsive_nav{
+  transform: none;
+}
+
+.navBtn{
+  display: inline-block;
+}
+}
+
+/*Responsive css end*/
