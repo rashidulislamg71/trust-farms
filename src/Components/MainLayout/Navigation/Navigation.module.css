@@ -1,17 +1,19 @@
 
 
 
- 
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Pattaya&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
-    --main-font: "Inter";
+    --main-font: "Rajdhani", sans-serif;
+    /* --main-font: "Inter"; */
     --main-color: rgba(0, 0, 0, 0.863);
     --logo-color1: rgb(36, 117, 54);
     --logo-color2: rgb(128, 181, 24);
     --account-color: rgb(14, 172, 159);
+    --nav-background-color:rgb(229, 243, 211);
 }
 
 
@@ -21,7 +23,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 5px 60px;
-background-color: rgb(243, 243, 243);
+background-color: var(--nav-background-color);
 color: var(--main-color);
 }
 
@@ -32,6 +34,11 @@ font-size: 40px;
 color: var(--logo-color1);
 letter-spacing: .4px;
 text-decoration: none;
+}
+
+.logo img{
+  height: 30px;
+  width: 30px;
 }
 
 .logo a{
@@ -54,10 +61,10 @@ gap: 30px;
 .menu a{
 position: relative;
 text-decoration: none;
-color: var(--main-color);
-font-size: 17px;
-font-family: Inter;
-font-weight: 500;
+color: rgba(3, 18, 22, 0.979);
+font-size: 20px;
+font-family: "Rajdhani", sans-serif;
+font-weight: bold;
 transition: .5s;
 }
 
@@ -73,9 +80,9 @@ transition: all .5s ease;
 }
 
 .menu a:hover::before{
-width: 100%;
+ width: 100%;
 }
-
+/* 
 .menu a:nth-child(5){
 margin-left: 100px;
 color: var(--account-color);
@@ -83,14 +90,14 @@ color: var(--account-color);
 
 .menu a:nth-child(6){
 color: var(--account-color);
-}
+} */
 
 .menu a:active{
-color: green;
+ color: green;
 }
 
 .menu a:hover{
-color: green;
+ color: green;
 }
 
 /*Menu css end*/

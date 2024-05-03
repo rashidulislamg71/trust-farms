@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef } from "react";
 import styles from "./Navigation.module.css";
-
+import logo from "..//..//..//../public/Trust farm logo.png"
 import {  FiX } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, NavLink } from "react-router-dom";
@@ -21,7 +21,7 @@ const Navigation = () => {
       <div className={styles.logo}>
         <Link to="/">
           <p>
-            Trust<span> Farms</span>
+           <img src={logo} alt="Logo" /> Trust<span> Farms</span>
           </p>
         </Link>
       </div>
