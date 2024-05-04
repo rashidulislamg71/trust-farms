@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 
 import React from "react";
@@ -6,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./Home.module.css";
 import banner_1 from "..//..//assets/Images/Banner img/vegetables.png";
-import banner_2 from "..//..//assets/Images/Banner img/Fruits1.png";
+import banner_2 from "..//..//assets/Images/Banner img/banner2.png";
 
 function Home() {
   const settings = {
@@ -20,8 +21,9 @@ function Home() {
   };
   return (
     <div className={styles.slider_container}>
-      <Slider {...settings}>
         <div className={styles.home_section}>
+      <Slider {...settings}>
+          <div className={styles.hero_banner}>
           <div className={styles.banner_1_container}>
             <div className={styles.content_text}>
               <h1>
@@ -43,31 +45,31 @@ function Home() {
               <img src={banner_1} alt="" />
             </div>
           </div>
-        </div>
-        <div className={styles.home_section}>
+          </div>
+          <div className={styles.hero_banner}>
           <div className={styles.banner_1_container}>
-            <div className={styles.content_text}>
-              <h1>
-                Wellcome to your Trust Farms
-              </h1>
-
-              <div className={styles.title}>
-                <h5>100% Genuine Products.</h5>
-                <h2>
-                  Tasty & Health <br /> Organic Foods.
-                  <div className={styles.offer}>
-                    <h2>20% OFF!</h2>
-                  </div>
-                </h2>
-                <button>Shop Now</button>
-              </div>
-            </div>
-            <div className={styles.content_img}>
+          <div className={styles.content_img}>
               <img src={banner_2} alt="" />
             </div>
+            <div className={`${styles.content_text} ${styles.content_text2}`}>
+              <div className={`${styles.title} ${styles.title2}`}>
+                <h5>100% Natural Products.</h5>
+                <h2>
+                  Our Garden's Most <br /> Favorite Foods
+                  {/* <div className={styles.offer}>
+                    <h2>20% OFF!</h2>
+                  </div> */}
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta <br /> numquam sequi maiores blanditiis ex autem</p>
+                <button>Explore Products</button>
+              </div>
+            </div>
+            
           </div>
         </div>
+       
       </Slider>
+        </div>
     </div>
   );
 }

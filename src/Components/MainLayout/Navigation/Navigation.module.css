@@ -8,47 +8,25 @@
 
 :root{
     --main-font: "Rajdhani", sans-serif;
-    /* --main-font: "Inter"; */
     --main-color: rgba(0, 0, 0, 0.863);
     --logo-color1: rgb(36, 117, 54);
-    --logo-color2: rgb(128, 181, 24);
+    --logo-color2: rgb(61, 68, 51);
     --account-color: rgb(14, 172, 159);
-    --nav-background-color:rgb(229, 243, 211);
+    --nav-background-color:rgba(177, 194, 194, 0.342);
 }
 
 
 
 .Navigation_Styles{
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 5px 60px;
-background-color: var(--nav-background-color);
-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 60px;
+  background-color: var(--nav-background-color);
+  color: var(--main-color);
 }
 
-.logo{
-font-family: "Pattaya", sans-serif;
-font-weight: 400;
-font-size: 40px;
-color: var(--logo-color1);
-letter-spacing: .4px;
-text-decoration: none;
-}
 
-.logo img{
-  height: 30px;
-  width: 30px;
-}
-
-.logo a{
-text-decoration: none;
-color: inherit;
-}
-
-.logo span{
-color: var(--logo-color2);
-}
 
 
 /*Menu css start*/
@@ -62,7 +40,7 @@ gap: 30px;
 position: relative;
 text-decoration: none;
 color: rgba(3, 18, 22, 0.979);
-font-size: 20px;
+font-size: 18px;
 font-family: "Rajdhani", sans-serif;
 font-weight: bold;
 transition: .5s;
@@ -138,7 +116,8 @@ color: var(--account-color);
     transition: transform 1s;
     transform: translateX(100%);
     margin-top: 67px;
-    background-color: rgb(243, 243, 243);
+    background-color: rgba(243, 243, 243, 0.555);
+    z-index: 1;
 }
 
 .menu a:nth-child(5){

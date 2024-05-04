@@ -1,0 +1,25 @@
+
+
+.logo{
+    font-family: "Pattaya", sans-serif;
+    font-size: 40px;
+    color: var(--logo-color2);
+    text-decoration: none;
+    }
+    
+    .logo img{
+      height: 30px;
+      width: 30px;
+     background-color: var(--logo-color2);
+     border-radius: 50%;
+     padding: 2px;
+    }
+    
+    .logo a{
+    text-decoration: none;
+    color: inherit;
+    }
+    
+    .logo span{
+    /* color: var(--main-color); */
+    }

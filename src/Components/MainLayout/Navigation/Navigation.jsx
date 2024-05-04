@@ -2,10 +2,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef } from "react";
 import styles from "./Navigation.module.css";
-import logo from "..//..//..//../public/Trust farm logo.png"
+
 import {  FiX } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../../Logo/Logo";
 
 const Navigation = () => {
   const navRef = useRef();
@@ -18,16 +19,12 @@ const Navigation = () => {
 
   return (
     <section className={styles.Navigation_Styles}>
-      <div className={styles.logo}>
-        <Link to="/">
-          <p>
-           <img src={logo} alt="Logo" /> Trust<span> Farms</span>
-          </p>
-        </Link>
-      </div>
+      <Logo />
       <nav ref={navRef} className={styles.menu}>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/products">Products</NavLink>
+        <NavLink to="/products">All Products</NavLink>
+        <NavLink to="/products">Vegetables</NavLink>
+        <NavLink to="/products">Fruits</NavLink>
         <NavLink to="/aboutus">About Us</NavLink>
         <NavLink to="/contactus">Contact Us</NavLink>
         {/* <NavLink to="/signin">Sign In</NavLink>

@@ -8,7 +8,7 @@
     --hero-font: "Rajdhani", sans-serif;
     --main-color: rgba(0, 0, 0, 0.699);
     --offer-color:rgba(152, 31, 182, 0.795);
-    --hero-background-color:rgb(235, 230, 206);
+    --hero-background-color:rgb(247, 245, 235);
     --btn-background-color: rgba(127, 181, 0, 0.938); 
 }
 
@@ -18,7 +18,11 @@
   }
 
   .home_section{
-    padding: 20px 60px;
+   
+  }
+
+  .hero_banner{
+    padding: 30px 60px;
     font-family: var(--hero-font);
     background-color: var(--hero-background-color);
   }
@@ -31,11 +35,15 @@
     
   }
 
+  .content_text2{
+    text-align: right;
+  }
+
   .content_text{
     
   }
   .content_text h1{
-    
+    margin-top: 40px;
   }
   
 
@@ -55,6 +63,28 @@
     gap: 140px;
     color:  rgb(7, 28, 31);
     font-size: 50px;
+  }
+
+  .title2 h2{
+    justify-content: right;
+  }
+
+  .title p{
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    margin: 30px 30px 0px 0px;
+    color: rgba(0, 0, 0, 0.541);
+    line-height: 25px;
+  }
+
+  .title p::before{
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 0px;
+    width: 1px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.219);
   }
 
 .offer h2{
@@ -84,7 +114,7 @@
     outline: none;
     background-color: var(--btn-background-color);
     color: white;
-    padding: 15px 40px;
+    padding: 12px 25px;
     font-size: 20px;
     cursor: pointer;
     transition: .8s;
@@ -114,6 +144,6 @@
 
   .content_img{}
   .content_img img{
-
+    /* max-width: 90%; */
   }
 
