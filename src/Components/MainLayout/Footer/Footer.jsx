@@ -104,27 +104,27 @@ const Footer = () => {
           <div
             className={`${styles.social_list} ${styles.footer_content_bottom}`}
           >
-            <a href="#">
+            <a title="Facebook" href="#">
               {" "}
               <FaFacebookSquare />{" "}
             </a>
-            <a href="#">
+            <a title="Linkein" href="#">
               {" "}
               <FaLinkedin />{" "}
             </a>
-            <a href="#">
+            <a title="Twiter" href="#">
               {" "}
               <FaTwitterSquare />{" "}
             </a>
-            <a href="#">
+            <a title="Youtube" href="#">
               {" "}
               <FaYoutubeSquare />{" "}
             </a>
-            <a href="#">
+            <a title="instagram" href="#">
               {" "}
               <FaInstagramSquare />{" "}
             </a>
-            <a href="#">
+            <a title="WhatsApp" href="#">
               {" "}
               <FaSquareWhatsapp />{" "}
             </a>
@@ -137,23 +137,23 @@ const Footer = () => {
           <div
             className={`${styles.payment_methods} ${styles.footer_content_bottom}`}
           >
-            <a href="#">
+            <a title="Bkash" href="#">
               {" "}
               <img src={bkash} alt="" />{" "}
             </a>
-            <a href="#">
+            <a title="Nagad" href="#">
               {" "}
               <img src={nagad} alt="" />{" "}
             </a>
-            <a href="#">
+            <a title="Paypal" href="#">
             <img src={paypal} alt="" />
               {/* <FaCcMastercard /> */}
             </a>
-            <a href="#">
+            <a title="MasterCard" href="#">
             <img src={masterCard} alt="" />
               {/* <RiVisaFill /> */}
             </a>
-            <a href="#">
+            <a title="Visa" href="#">
             <img src={visa} alt="" />
               {/* <FaCcPaypal /> */}
             </a>

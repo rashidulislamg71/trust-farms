@@ -18,12 +18,16 @@
 
 
 .Navigation_Styles{
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 60px;
   background-color: var(--nav-background-color);
   color: var(--main-color);
+  box-shadow: 3px 3px 10px rgb(177, 209, 218);
+  z-index: 1;
 }
 
 

@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --about-color:rgba(2, 16, 20, 0.699);
+    --about-font-family: "Rajdhani", sans-serif;
+    --heading-color:rgb(128, 181, 0);
+    --about-para-font-family: "Open Sans", sans-serif;
+    --about-bg-color: #ffff;
+    
+}
+
+
+.aboutUs_section{
+    background-color: #ffff;
+}
+
+.about_container{
+
+}
+
+.about_banner {
+   
+
+}
+
+.about_content{
+
+}
+
+/*About img css start*/
+
+.aboutus_textAndimg{
+
+}
+
+.about_img_container{
+    padding: 60px 0px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    /* background-color: var(--about-bg-color); */
+}
+
+.about_img1, .about_img3, .about_img2{
+    height: 240px;
+    width: 350px;
+    border: 3px solid rgba(128, 128, 128, 0.699);
+    border-radius: 3px;
+    transition: all 1s ease;
+}
+
+.about_img2{
+    height: 290px;
+    width: 400px;
+}
+
+.about_img3:hover, .about_img2:hover, .about_img1:hover{
+    transform: scale(1.1);
+}
+
+/*About img css end*/
+
+
+/*About text css start*/
+
+.about_inner_text{
+    padding: 40px 60px;
+    /* background-color: #ffff; */
+}
+
+.about_inner_text h1{
+    color: var(--heading-color);
+    /* text-align: center; */
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+}
+.about_inner_text b{
+    text-transform: uppercase;
+    color: var(--heading-color);
+    font-size: 13px;
+}
+.about_inner_text h2{ 
+    font-size: 50px;
+    font-family: var(--about-font-family);
+    line-height: 50px;
+    letter-spacing: -1px;
+    color: rgba(0, 0, 0, 0.904);
+    margin: 10px 0px 40px 0px;
+
+}
+
+.about_inner_text .styles_p{
+    position: relative;
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+.about_inner_text .styles_p::before{
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    height: 90px;
+    width: 3px;
+    background-color: var(--heading-color);
+}
+.about_inner_text p{
+    font-size: 17px;
+    font-family: var(--about-para-font-family);
+    color: var(--about-color);
+ }
+
+/*About text css end*/
+
+
+/*About why choose us css start*/
+
+.why_choose_us{
+    background-color: rgb(247, 245, 235);
+    padding: 100px 60px 80px 60px;
+}
+
+
+
+.why_choose_us_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+}
+
+.title p{
+    color: var(--heading-color);font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+.title h1{
+    text-align: center;
+    font-family: var(--about-font-family);
+    margin:  10px 0px 50px 0px;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.932);
+}
+
+.title h1 span{
+    color: var(--heading-color);
+    font-size: 60px;
+}
+
+.features_container{
+    max-width: 320px;
+    max-width: 380px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 20px rgb(170, 165, 165);
+}
+
+.icon_title{
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    font-size: 20px;
+    color: black;
+    font-family: var(--about-font-family);
+    transition: all .7s ease;
+    cursor: pointer;
+}
+
+.icon_title:hover{
+    color: var(--heading-color);
+}
+
+.feature_text{
+    margin-top: 20px;
+}
+
+.feature_text p {
+    font-size: 17px;
+    font-family: var(--about-para-font-family);
+    line-height: 22px; 
+}
+
+
+
+/*About why choose us css end*/
+
+
+/*About text css end*/
+/*About text css end*/
+
+
+
+
+.team_member{}
