@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import styles from "./Navigation.module.css";
 
-import {  FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../Logo/Logo";
@@ -19,33 +19,37 @@ const Navigation = () => {
 
   return (
     <section className={styles.Navigation_Styles}>
-      <Logo />
-      <nav ref={navRef} className={styles.menu}>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/products">All Products</NavLink>
-        <NavLink to="/products">Vegetables</NavLink>
-        <NavLink to="/products">Fruits</NavLink>
-        <NavLink to="/aboutus">About Us</NavLink>
-        <NavLink to="/contactus">Contact Us</NavLink>
-        {/* <NavLink to="/signin">Sign In</NavLink>
+      <div className={styles.navBar}>
+        <Logo />
+        <nav ref={navRef} className={styles.menu}>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/products">All Products</NavLink>
+          <NavLink to="/products">Vegetables</NavLink>
+          <NavLink to="/products">Fruits</NavLink>
+          <NavLink to="/aboutus">About Us</NavLink>
+          <NavLink to="/contactus">Contact Us</NavLink>
+          {/* <NavLink to="/signin">Sign In</NavLink>
         <NavLink to="/signup">Sign Up</NavLink> */}
-      </nav>
+        </nav>
 
-      
-
-      {showMenu ? (
-          <button className={`${styles.navBtn} ${styles.openMenu}`} onClick={showNavBar}>
+        {showMenu ? (
+          <button
+            className={`${styles.navBtn} ${styles.openMenu}`}
+            onClick={showNavBar}
+          >
             <RxHamburgerMenu />
           </button>
         ) : (
-          <button className={`${styles.navBtn} ${styles.clossMenu}`} onClick={showNavBar}>
+          <button
+            className={`${styles.navBtn} ${styles.clossMenu}`}
+            onClick={showNavBar}
+          >
             <FiX />
           </button>
         )}
+      </div>
     </section>
   );
 };
 
 export default Navigation;
-
-

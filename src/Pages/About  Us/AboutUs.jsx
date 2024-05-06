@@ -9,6 +9,19 @@ import featureImg_1 from "..//..//assets/Images/icons/Natural.png";
 import featureImg_2 from "..//..//assets/Images/icons/Delevery.png";
 import featureImg_3 from "..//..//assets/Images/icons/Good Pakeging.png";
 
+// Team Members img
+import funder from "..//..//assets/Images/Team_members/Funder.png";
+import funder2 from "..//..//assets/Images/Team_members/Funder2.png";
+import CEO from "..//..//assets/Images/Team_members/CEO.png";
+import manager from "..//..//assets/Images/Team_members/Manager.png";
+
+// Team members socials
+import { IoLogoFacebook } from "react-icons/io";
+import { IoLogoLinkedin } from "react-icons/io";
+import { IoLogoTwitter } from "react-icons/io";
+import { AiFillInstagram } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
+
 const AboutUs = () => {
   return (
     <section className={styles.aboutUs_section}>
@@ -112,7 +125,77 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className={`${styles.about_content} ${styles.team_member}`}></div>
+        <div className={`${styles.about_content} ${styles.team_members}`}>
+            <div className={styles.team_member_title}>
+              <h1>Team Members</h1>
+            </div>
+          <div className={styles.team_members_container}>
+            <div className={styles.team_members_inner_content}>
+              <div className={styles.team_member_img}>
+                <img src={funder} alt="Funder" />
+              </div>
+              <div className={styles.tema_member_identity}>
+                <h4>FUNDER</h4>
+                <h3>KAMRUL KOLI</h3>
+              <div className={styles.team_members_socials}>
+                  <span><IoLogoFacebook /></span>
+                  <span><IoLogoLinkedin /></span>
+                  <span><AiFillInstagram /></span>
+                  <span><IoLogoTwitter /></span>
+                  <span><AiOutlineMail /></span>
+              </div>
+              </div>
+            </div>
+            <div className={styles.team_members_inner_content}>
+              <div className={styles.team_member_img}>
+                <img src={funder2} alt="Funder" />
+              </div>
+              <div className={styles.tema_member_identity}>
+                <h4>FUNDER</h4>
+                <h3>RASHED HASSAN</h3>
+              <div className={styles.team_members_socials}>
+                  <span><IoLogoFacebook /></span>
+                  <span><IoLogoLinkedin /></span>
+                  <span><AiFillInstagram /></span>
+                  <span><IoLogoTwitter /></span>
+                  <span><AiOutlineMail /></span>
+              </div>
+              </div>
+            </div>
+            <div className={styles.team_members_inner_content}>
+              <div className={styles.team_member_img}>
+                <img src={CEO} alt="CEO" />
+              </div>
+              <div className={styles.tema_member_identity}>
+                <h4>CEO</h4>
+                <h3>JABIR AL HAYYAN</h3>
+              <div className={styles.team_members_socials}>
+                  <span><IoLogoFacebook /></span>
+                  <span><IoLogoLinkedin /></span>
+                  <span><AiFillInstagram /></span>
+                  <span><IoLogoTwitter /></span>
+                  <span><AiOutlineMail /></span>
+              </div>
+              </div>
+            </div>
+            <div className={styles.team_members_inner_content}>
+              <div className={styles.team_member_img}>
+                <img src={manager} alt="manager" />
+              </div>
+              <div className={styles.tema_member_identity}>
+                <h4>Manager</h4>
+                <h3>NOMAN IBNE SABIT</h3>
+              <div className={styles.team_members_socials}>
+                  <span><IoLogoFacebook /></span>
+                  <span><IoLogoLinkedin /></span>
+                  <span><AiFillInstagram /></span>
+                  <span><IoLogoTwitter /></span>
+                  <span><AiOutlineMail /></span>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
