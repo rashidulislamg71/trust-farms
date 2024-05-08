@@ -1,0 +1,26 @@
+
+
+
+
+.customer_feedback_styles{
+    
+    background-color: rgba(22, 156, 218, 0.699);
+}
+
+.feedback_slider{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback_slider img{
+    height: 120px;
+    width: 120px;
+    border-radius: 5px;
+}
+

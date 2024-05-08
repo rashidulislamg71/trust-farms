@@ -21,6 +21,9 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { IoLogoTwitter } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
+import CustomerFeedback from "../../Components/CustomerFeedback/CustomerFeedback";
+import ShopBtn from "../../Components/ShopBtn/ShopBtn";
+
 
 const AboutUs = () => {
   return (
@@ -81,7 +84,9 @@ const AboutUs = () => {
         <div className={`${styles.about_content} ${styles.why_choose_us}`}>
           <div className={styles.title}>
             <p>|| FEATURES ||</p>
-            <h1>Why Choose Us<span>!</span></h1>
+            <h1>
+              Why Choose Us<span>!</span>
+            </h1>
           </div>
           <div className={styles.why_choose_us_inner}>
             <div className={styles.features_container}>
@@ -126,76 +131,137 @@ const AboutUs = () => {
           </div>
         </div>
         <div className={`${styles.about_content} ${styles.team_members}`}>
-            <div className={styles.team_member_title}>
-              <h1>Team Members</h1>
-            </div>
+          <div className={styles.team_member_title}>
+            <h1>Team Members</h1>
+          </div>
           <div className={styles.team_members_container}>
-            <div className={styles.team_members_inner_content}>
-              <div className={styles.team_member_img}>
-                <img src={funder} alt="Funder" />
+            <div className={styles.team_member_inner_content}>
+              <div className={styles.team_memeber_front}>
+                <div className={styles.team_member_img}>
+                  <img src={funder} alt="Funder" />
+                </div>
+                <div className={styles.team_member_identity}>
+                  <h4>FUNDER</h4>
+                  <h3>KAMRUL KOLI</h3>
+                </div>
               </div>
-              <div className={styles.tema_member_identity}>
-                <h4>FUNDER</h4>
-                <h3>KAMRUL KOLI</h3>
-              <div className={styles.team_members_socials}>
-                  <span><IoLogoFacebook /></span>
-                  <span><IoLogoLinkedin /></span>
-                  <span><AiFillInstagram /></span>
-                  <span><IoLogoTwitter /></span>
-                  <span><AiOutlineMail /></span>
-              </div>
-              </div>
-            </div>
-            <div className={styles.team_members_inner_content}>
-              <div className={styles.team_member_img}>
-                <img src={funder2} alt="Funder" />
-              </div>
-              <div className={styles.tema_member_identity}>
-                <h4>FUNDER</h4>
-                <h3>RASHED HASSAN</h3>
-              <div className={styles.team_members_socials}>
-                  <span><IoLogoFacebook /></span>
-                  <span><IoLogoLinkedin /></span>
-                  <span><AiFillInstagram /></span>
-                  <span><IoLogoTwitter /></span>
-                  <span><AiOutlineMail /></span>
-              </div>
-              </div>
-            </div>
-            <div className={styles.team_members_inner_content}>
-              <div className={styles.team_member_img}>
-                <img src={CEO} alt="CEO" />
-              </div>
-              <div className={styles.tema_member_identity}>
-                <h4>CEO</h4>
-                <h3>JABIR AL HAYYAN</h3>
-              <div className={styles.team_members_socials}>
-                  <span><IoLogoFacebook /></span>
-                  <span><IoLogoLinkedin /></span>
-                  <span><AiFillInstagram /></span>
-                  <span><IoLogoTwitter /></span>
-                  <span><AiOutlineMail /></span>
-              </div>
+
+              <div className={styles.team_member_hover}>
+                <div className={styles.team_members_socials}>
+                  <span>
+                    <IoLogoFacebook />
+                  </span>
+                  <span>
+                    <IoLogoLinkedin />
+                  </span>
+                  <span>
+                    <AiFillInstagram />
+                  </span>
+                  <span>
+                    <IoLogoTwitter />
+                  </span>
+                  <span>
+                    <AiOutlineMail />
+                  </span>
+                </div>
               </div>
             </div>
-            <div className={styles.team_members_inner_content}>
-              <div className={styles.team_member_img}>
-                <img src={manager} alt="manager" />
+            <div className={styles.team_member_inner_content}>
+              <div className={styles.team_memeber_front}>
+                <div className={styles.team_member_img}>
+                  <img src={funder2} alt="Funder" />
+                </div>
+                <div className={styles.team_member_identity}>
+                  <h4>FUNDER</h4>
+                  <h3>JARIR RASHED</h3>
+                </div>
               </div>
-              <div className={styles.tema_member_identity}>
-                <h4>Manager</h4>
-                <h3>NOMAN IBNE SABIT</h3>
-              <div className={styles.team_members_socials}>
-                  <span><IoLogoFacebook /></span>
-                  <span><IoLogoLinkedin /></span>
-                  <span><AiFillInstagram /></span>
-                  <span><IoLogoTwitter /></span>
-                  <span><AiOutlineMail /></span>
+
+              <div className={styles.team_member_hover}>
+                <div className={styles.team_members_socials}>
+                  <span>
+                    <IoLogoFacebook />
+                  </span>
+                  <span>
+                    <IoLogoLinkedin />
+                  </span>
+                  <span>
+                    <AiFillInstagram />
+                  </span>
+                  <span>
+                    <IoLogoTwitter />
+                  </span>
+                  <span>
+                    <AiOutlineMail />
+                  </span>
+                </div>
               </div>
+            </div>
+            <div className={styles.team_member_inner_content}>
+              <div className={styles.team_memeber_front}>
+                <div className={styles.team_member_img}>
+                  <img src={CEO} alt="Funder" />
+                </div>
+                <div className={styles.team_member_identity}>
+                  <h4>CEO</h4>
+                  <h3>JKARIYA KOBIR</h3>
+                </div>
+              </div>
+
+              <div className={styles.team_member_hover}>
+                <div className={styles.team_members_socials}>
+                  <span>
+                    <IoLogoFacebook />
+                  </span>
+                  <span>
+                    <IoLogoLinkedin />
+                  </span>
+                  <span>
+                    <AiFillInstagram />
+                  </span>
+                  <span>
+                    <IoLogoTwitter />
+                  </span>
+                  <span>
+                    <AiOutlineMail />
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className={styles.team_member_inner_content}>
+              <div className={styles.team_memeber_front}>
+                <div className={styles.team_member_img}>
+                  <img src={manager} alt="Funder" />
+                </div>
+                <div className={styles.team_member_identity}>
+                  <h4>MANAGER</h4>
+                  <h3>JABIR IBNE HAYYAN</h3>
+                </div>
+              </div>
+
+              <div className={styles.team_member_hover}>
+                <div className={styles.team_members_socials}>
+                  <span>
+                    <IoLogoFacebook />
+                  </span>
+                  <span>
+                    <IoLogoLinkedin />
+                  </span>
+                  <span>
+                    <AiFillInstagram />
+                  </span>
+                  <span>
+                    <IoLogoTwitter />
+                  </span>
+                  <span>
+                    <AiOutlineMail />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

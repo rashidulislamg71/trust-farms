@@ -193,7 +193,8 @@
 /*About Team members css 
 start*/
 .team_members{
-    padding: 90px 60px  ;
+    padding: 90px 60px;
+    
 }
 
 .team_members_container{
@@ -201,7 +202,6 @@ start*/
     justify-content: center;
     align-items: center;
     gap: 30px;
-    
 }
 
 .team_member_title{
@@ -211,37 +211,41 @@ start*/
     margin-bottom: 40px;
 }
 
-.team_members_inner_content{
+.team_member_inner_content{
     position: relative;
+    cursor: pointer;
+}
+
+.team_member_inner_content::before{    
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 0%;
+    background-color: rgba(72, 87, 87, 0.562);
+    transition:all .5s ease;
+}
+
+.team_member_inner_content:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+.team_memeber_front{
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: space-between;
     align-items: center;
-    height: 365px;
-    width: 280px;
+    height: 330px;
+    width: 250px;
     box-shadow: 3px 3px 10px rgb(171, 169, 173);
     border-radius: 2px;
     padding: 20px;
     font-family: var(--about-font-family);
-    transition:.7s ;
 }
 
-.team_members_inner_content::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 0%;
-    background-color: rgba(4, 64, 66, 0.185);
-    transition: .8s;
-    
-} 
 
-.team_members_inner_content:hover::before{
-    width: 100%;
-    height: 100%;
-}
 
 .team_member_img{
     display: flex;
@@ -253,22 +257,32 @@ start*/
     border-radius: 50%;
     height: 180px;
     width: 180px;
-    z-index: 1;
 }
 
-.tema_member_identity{
-    z-index: 1;
+.team_member_identity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.tema_member_identity h4{
+.team_member_identity h4{
    text-align: center;
    color: var(--heading-color);
    margin-bottom: 2px;
 }
 
-.tema_member_identity h3{
+.team_member_identity h3{
     text-align: center;
     margin:10px 0px;
+}
+
+.team_member_hover{
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    opacity: 0;
+    transition: all .6s ease;
 }
 
 .team_members_socials{
@@ -283,6 +297,12 @@ start*/
 
 .team_members_socials span{
     cursor: pointer;
+}
+
+.team_member_inner_content:hover .team_member_hover{
+    opacity: 1;
+    visibility: visible;
+   
 }
 
 
