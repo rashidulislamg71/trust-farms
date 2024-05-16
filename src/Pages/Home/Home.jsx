@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "./Home.module.css";
 import banner_1 from "..//..//assets/Images/Banner img/vegetables.png";
 import banner_2 from "..//..//assets/Images/Banner img/banner2.png";
+import Fruits_products from "../../Components/Fruits_products/Fruits_products";
 
 function Home() {
   const settings = {
@@ -69,6 +70,9 @@ function Home() {
         </div>
        
       </Slider>
+
+            {/* Fruits_products */}
+            <Fruits_products />
         </div>
     </div>
   );
