@@ -21,19 +21,20 @@
 
 
 .fruits_products_styles{
-    padding: 60px 60px;
+    padding: 60px 40px;
     background-color: rgb(255, 255, 255);
 }
 
 .fruits_container{
-
+    margin: 0 auto;
 }
 
 .fruits_title{
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     color: var(--cart-color-black);
     font-family: var(--cart-font-family);
+    margin-bottom: 40px;
 }
 
 .fruits_inner_content{
