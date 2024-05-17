@@ -6,7 +6,7 @@ import styles from "./Our_Services.module.css";
 import { TbTruckDelivery } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
 import { GiReturnArrow } from "react-icons/gi";
-import { FcApproval } from "react-icons/fc";
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
 
 const Our_Services = () => {
   return (
@@ -27,7 +27,7 @@ const Our_Services = () => {
           </div>
           <div className={styles.our_service_content}>
             <div className={styles.service_icons}>
-              <BiSupport />
+              <AiOutlineSafetyCertificate />
             </div>
             <div className={styles.service_content}>
               <h3>Quality Products</h3>
@@ -49,7 +49,7 @@ const Our_Services = () => {
           </div>
           <div className={styles.our_service_content}>
             <div className={styles.service_icons}>
-              <FcApproval />
+              <BiSupport />
             </div>
             <div className={styles.service_content}>
               <h3>24/7 Hours Support</h3>
