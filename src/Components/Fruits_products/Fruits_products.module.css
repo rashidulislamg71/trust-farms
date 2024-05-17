@@ -18,14 +18,15 @@
     --genaral-font-family: "Inter", sans-serif;
     
 }
+
+
 .fruits_products_styles{
     padding: 60px 60px;
     background-color: rgb(255, 255, 255);
 }
 
 .fruits_container{
-    max-width: 95%;
-    margin: 0 auto;
+
 }
 
 .fruits_title{
@@ -36,10 +37,10 @@
 }
 
 .fruits_inner_content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 30px;
+  place-items: center;
 }
 
 .fruits_cart{
@@ -49,6 +50,7 @@
     font-family: var(--cart-font-family);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     transition: .5s;
+    width: fit-content;
 }
 
 .fruits_cart:hover{
@@ -86,7 +88,7 @@
 .fruits_cart_top .cart_img {}
 .fruits_cart_top .cart_img img{
     height: 160px;
-    width: auto;
+    /* width: auto; */
 }
 
 .addToCart_like_shear_btn{
@@ -173,4 +175,107 @@
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.507);
     background-color: rgba(103, 167, 7, 0.911);
 }
+
+
+
+/** Responsive CSS Start**/
+
+@media  only screen and (max-width: 1024px){
+
+    .fruits_products_styles{
+        padding: 20px 10px;
+    }
+    
+    .fruits_title{
+        font-size: 30px;
+    }
+    
+    .fruits_inner_content{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px 10px;
+    }
+    
+    .fruits_cart_top{
+        padding: 15px;
+        height: 200px;
+        width: 220px;
+    }
+    
+    .fruits_cart_top .cart_img img{
+        height: 120px;
+    }
+    
+    .fruits_cart_bottom{
+        padding: 12px;
+    }
+
+}
+
+
+@media  only screen and (max-width: 720px){
+
+    .fruits_products_styles{
+        padding: 30px 10px;
+        margin: 0 auto;
+    }
+    
+    .fruits_title{
+        font-size: 25px;
+    }
+    
+    .fruits_inner_content{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 10px;
+    }
+    
+    .fruits_cart_top{
+        padding: 15px;
+        height: 120px;
+        width: 150px;
+    }
+    
+
+    .fruits_cart_top .cart_img img{
+        height: 95px;
+    }
+
+    .addToCart_like_shear_btn{
+        gap: 10px;
+    }
+
+    .addToCart_like_shear_btn > button{
+        font-size: 17px;
+    }
+    
+    .fruits_cart_bottom{
+        padding: 12px;
+    }
+
+    .fruits_cart_bottom{
+        padding: 10px;
+    }
+    
+    .fruits_cart_bottom .fruit_name{
+        font-size: 16px;
+    }
+    
+    
+    .fruits_cart_bottom .fruit_price{
+        font-size: 17px;
+    }
+
+    .fruits_cart_bottom .comment_btn button{
+        border-radius: 1px;
+        padding: 0px;
+        font-size: 15px;
+       font-weight: 500;
+    }
+
+}
+
+/** Responsive CSS End**/
+
+
 

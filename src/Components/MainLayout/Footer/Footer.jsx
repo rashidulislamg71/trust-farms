@@ -132,7 +132,7 @@ const Footer = () => {
           <div
             className={`${styles.copy_right} ${styles.footer_content_bottom}`}
           >
-            <p>&copy;2024 All Right Reserved By Trust Farms</p>
+            <p>&copy;2024 All Right Reserved By Trust Farms Ltd.</p>
           </div>
           <div
             className={`${styles.payment_methods} ${styles.footer_content_bottom}`}
