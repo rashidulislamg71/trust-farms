@@ -9,6 +9,7 @@ import styles from "./Home.module.css";
 import banner_1 from "..//..//assets/Images/Banner img/vegetables.png";
 import banner_2 from "..//..//assets/Images/Banner img/banner2.png";
 import Fruits_products from "../../Components/Fruits_products/Fruits_products";
+import Offer_products from "../../Components/Offer_products/Offer_products";
 
 function Home() {
   const settings = {
@@ -71,7 +72,7 @@ function Home() {
        
       </Slider>
 
-            {/* Fruits_products */}
+            <Offer_products />
             <Fruits_products />
         </div>
     </div>
