@@ -10,7 +10,7 @@ const VF_Offer_Products = () => {
             <div className={styles.vegetables_offer_inner_content}>
               <div className={styles.text}>
                 <h3>FRESH VEGETABLEES</h3>
-                <h2>Energize Your Life, <br />Eat Vegetables Every Day!</h2>
+                <h2>Vegetables Every Day!</h2>
                 <h5>Get 32% OFF on 98.00$ Shopping!</h5>
                 <br />
                 <br />
@@ -32,7 +32,7 @@ const VF_Offer_Products = () => {
             <div className={styles.fruits_offer_inner_content}>
               <div className={styles.text}>
                 <h3>FRESH FRUITS</h3>
-                <h2>EAT FRESH FRUIT, <br /> TO LEAD HEALTHY LIFE!</h2>
+                <h2>FRESH FRUIT HEALTHY LIFE!</h2>
                 <h5>Get 20% OFF on 3.00kg Shopping!</h5>
                 <br />
                 <br />
