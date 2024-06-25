@@ -3,12 +3,13 @@ import App from './../App';
 import Home from './../Pages/Home/Home';
 import AboutUs from "../Pages/About  Us/AboutUs";
 import ContactUs from './../Pages/Contact Us/ContactUs';
-import SignIn from "../Pages/Sign In/SignIn";
+import SignIn from "../Pages/Login/Login";
 import SignUp from "../Pages/Sign Up/SignUp";
 import Fruits from "../Pages/Fruits/Fruits";
 import Vegetables from "../Pages/Vegetables/Vegetables";
 import All_Products from "../Pages/All_Products/All_Products";
 import NotFound from "../Pages/Not_Found/NotFound";
+import Login from "../Pages/Login/Login";
 
 const routers = createBrowserRouter([
     {
@@ -41,8 +42,8 @@ const routers = createBrowserRouter([
                 element: <ContactUs />
             },
             {
-                path: "/signin",
-                element: <SignIn />,
+                path: "/login",
+                element: <Login />,
             },
             {
                 path: "/signup",

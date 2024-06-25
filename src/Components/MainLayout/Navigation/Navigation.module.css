@@ -10,8 +10,14 @@
   --nav-background-color: rgba(177, 194, 194, 0.342);
 }
 
+#navigation{
+  position:relative;
+}
+
 .Navigation_Styles {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .navBar {
@@ -22,7 +28,6 @@
   background-color: var(--nav-background-color);
   color: var(--main-color);
   box-shadow: 3px 3px 10px rgb(177, 209, 218);
-  z-index: 1;
 }
 
 .navBar_logo {
@@ -67,9 +72,102 @@
   color: green;
 }
 
- a.active {
+a.active {
   color: rgb(128, 181, 0);
   border-bottom: 2px solid rgb(128, 181, 0);
+}
+
+.cartAndAccount{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.account_container {
+  position: relative;
+  width: 100px;
+  font-family: "Rajdhani", sans-serif;
+  
+}
+
+.account{
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: #289fbd;
+  border: 1px solid #ffff;
+  padding: 6px 0px;
+  border-radius: 2px;
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.account_inner_content {
+  background-color: white;
+  position: absolute;
+  top: 110%;
+  left: 0px;
+  border-radius: 4px;
+  transition:all .5s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+
+.account_container:hover .account_inner_content {
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+  transform: scaleY(1);
+  
+}
+
+.account_dropdown a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid gray;
+  transition: all .5s ease;
+  font-weight: 600;
+}
+
+.account_dropdown:last-child a {
+  border-bottom: none;
+}
+
+.account_dropdown a:hover {
+  color: green;
+  background-color: rgba(188, 226, 226, 0.733);
+}
+
+.addToCart{
+  position: relative;
+  color: var(--main-color);
+  background-color: rgb(238, 240, 229);
+  padding: 4px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+
+.addToCart:hover, .account:hover{
+  background-color: rgb(135, 186, 16);
+  color: rgb(255, 255, 255);
+}
+
+.addToCart p b{
+  color: rgba(2, 41, 41, 0.87);
+  font-size: 20px;
 }
 
 .navBtn {
@@ -82,11 +180,11 @@
 
 @media only screen and (max-width: 1024px) {
   .Navigation_Styles {
-    padding: 0px 10px;
+    padding: 0px 0px;
   }
 
   .navBar {
-    padding: 5px 30px;
+    padding: 5px 40px;
   }
 
   .menu {
@@ -118,7 +216,15 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .Navigation_Styles {
+    padding: 0px 0px;
+  }
+
   .navBar {
-    padding: 5px 20px;
+    padding: 5px 10px;
+  }
+
+  .navBar {
+    box-shadow: 3px 3px 10px rgb(177, 209, 218);
   }
 }

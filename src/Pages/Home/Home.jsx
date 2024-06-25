@@ -59,9 +59,9 @@ function Home() {
                 <h5>100% Natural Products.</h5>
                 <h2>
                   Our Garden's Most <br /> Favorite Foods
-                  <div className={styles.offer}>
+                  {/* <div className={styles.offer}>
                     <h2>20% OFF!</h2>
-                  </div>
+                  </div> */}
                 </h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta <br /> numquam sequi maiores blanditiis ex autem</p>
                 <button>Explore Products</button>
