@@ -11,7 +11,7 @@
 }
 
 #navigation{
-  position:relative;
+  position: relative;
 }
 
 .Navigation_Styles {
@@ -209,9 +209,26 @@ a.active {
     transform: none;
   }
 
+
+  .cartAndAccount{
+   padding-left: 260px;
+    gap: 20px;
+  }
+  
+  .account{
+    padding: 3px 0px;
+  }
+  
+  .addToCart{
+    font-size: 20px;
+  }
+
   .navBtn {
     display: flex;
     align-items: center;
+    padding: 4px;
+    background-color: #289fbd;
+    color: rgb(6, 24, 44);
   }
 }
 
@@ -222,6 +239,35 @@ a.active {
 
   .navBar {
     padding: 5px 10px;
+  }
+
+  .cartAndAccount{
+    gap: 15px;
+    
+  }
+  
+
+  
+  .account{
+    font-size: 18px;
+    padding: 3px 8px;
+    margin-left: 20px;
+    border-color: #ffffff77;
+  }
+
+  .account_dropdown a {
+    padding: 8px;
+  }
+  
+  
+  .addToCart{
+    padding: 2px;
+    font-size: 20px;
+  }
+  
+  
+  .addToCart p b{
+    font-size: 18px;
   }
 
   .navBar {

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState, useRef } from "react";
 import styles from "./Navigation.module.css";
 import { FiX } from "react-icons/fi";
@@ -86,14 +87,14 @@ const Navigation = () => {
                   </div>
                 </div>
               </div>
-            <div className={styles.addToCart}>
+            <div title="Add to Cart" className={styles.addToCart}>
               <p>
                 <FiShoppingCart /> <b>0</b>
               </p>
             </div>
           </div>
 
-          <button className={styles.navBtn} onClick={showNavBar}>
+          <button title="menu" className={styles.navBtn} onClick={showNavBar}>
             {showMenu ? <FiX /> : <RxHamburgerMenu />}
           </button>
         </div>
