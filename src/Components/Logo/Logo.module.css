@@ -32,3 +32,14 @@
     width: 25px;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    font-size: 25px;
+  }
+
+  .logo img {
+    height: 20px;
+    width: 20px;
+  }
+}

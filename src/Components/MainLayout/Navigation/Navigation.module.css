@@ -189,7 +189,7 @@ a.active {
 
   .menu {
     position: fixed;
-    top: 65px;
+    top: -13px;
     right: 0;
     height: 300px;
     width: 270px;
@@ -237,7 +237,7 @@ a.active {
   }
 
   .navBar {
-    padding: 5px 10px;
+    padding: 10px 10px;
   }
 
   .cartAndAccount{
@@ -272,4 +272,33 @@ a.active {
   .navBar {
     box-shadow: 3px 3px 10px rgb(177, 209, 218);
   }
+}
+
+@media only screen and( max-width: 400px) {
+  .Navigation_Styles {
+    padding: 0px 0px;
+  }
+
+  .navBar {
+    padding: 15px 10px;
+  }
+
+  .cartAndAccount{
+    gap: 0px;
+  }
+  
+  .account{
+    font-size: 16px;
+    padding: 3px 2px;
+    border-color: #ffffff77;
+  }
+  
+  .addToCart{
+    font-size: 18px;
+  }
+  
+  .addToCart p b{
+    font-size: 16px;
+  }
+
 }

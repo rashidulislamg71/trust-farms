@@ -1,149 +1,247 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rajdhani:wght@300;400;500;600;700&display=swap");
 
-
-
-  :root{
-    --hero-font: "Rajdhani", sans-serif;
-    --main-color: rgba(0, 0, 0, 0.699);
-    --offer-color:rgba(152, 31, 182, 0.795);
-    --hero-background-color:rgb(247, 245, 235);
-    --btn-background-color: rgba(127, 181, 0, 0.938); 
+:root {
+  --hero-font: "Rajdhani", sans-serif;
+  --main-color: rgba(0, 0, 0, 0.699);
+  --offer-color: rgba(152, 31, 182, 0.795);
+  --hero-background-color: rgb(247, 245, 235);
+  --btn-background-color: rgba(127, 181, 0, 0.938);
 }
 
+.slider_container {
+  max-width: 95%;
+  margin: 0 auto;
+}
 
-  .slider_container{
+.home_section {
+}
 
+.slick-prev {
+  left: 20px;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 19px;
+  background: rebeccapurple;
+  color: gold;
+}
+
+.hero_banner {
+  padding: 70px 60px;
+  font-family: var(--hero-font);
+  background-color: var(--hero-background-color);
+}
+
+.banner_1_container,
+.banner_2_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content_text2 {
+  text-align: right;
+}
+
+.content_text {
+}
+.content_text h1 {
+  margin-top: 40px;
+}
+
+.title {
+}
+
+.title h5 {
+  margin: 40px 0px;
+  font-size: 17px;
+  color: var(--btn-background-color);
+}
+.title h2 {
+  color: rgb(7, 28, 31);
+  font-size: 50px;
+}
+
+.title2 h2 {
+  justify-content: right;
+}
+
+.title p {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  margin: 30px 30px 0px 0px;
+  color: rgba(0, 0, 0, 0.541);
+  line-height: 25px;
+}
+
+.title p::before {
+  content: "";
+  position: absolute;
+  right: -30px;
+  top: 0px;
+  width: 1px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.219);
+}
+
+.offer h2 {
+  color: orange;
+  font-size: 40px;
+  border: 2px solid;
+  padding: 4px;
+  border-radius: 3px;
+  animation: offer 3s infinite ease-in-out;
+}
+
+@keyframes offer {
+  50% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.content_text button {
+  position: relative;
+  margin: 30px 0px;
+  border: 1px solid white;
+  border-radius: 3px;
+  outline: none;
+  background-color: var(--btn-background-color);
+  color: white;
+  padding: 12px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.8s;
+  z-index: 1;
+}
+
+.content_text button::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 0;
+  height: 100%;
+  color: var(--btn-color);
+  transition: 0.5s;
+  color: rgb(3, 19, 16);
+  background-color: rgb(108, 216, 202);
+  border-radius: 3px;
+}
+
+.content_text button:hover::before {
+  width: 100%;
+  z-index: -1;
+}
+
+.banner_img {
+}
+.banner_img img {
+  /* max-width: 90%; */
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero_banner {
+    padding: 50px 30px;
   }
 
-  .home_section{
-   
+  .content_text h1 {
+    margin-top: 30px;
+    font-size: 25px;
   }
 
-  .hero_banner{
-    padding: 40px 60px;
-    font-family: var(--hero-font);
-    background-color: var(--hero-background-color);
+  .title h5 {
+    margin: 20px 0px;
   }
 
-  .banner_1_container, 
-  .banner_2_container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  .title h2 {
+    font-size: 30px;
   }
 
-  .content_text2{
-    text-align: right;
-  }
-
-  .content_text{
-    
-  }
-  .content_text h1{
-    margin-top: 40px;
-  }
-  
-
-  .title{
-
-  }
-
-  .title h5{
-    margin: 40px 0px;
-    font-size: 17px;
-    color: var(--btn-background-color);
-  }
-  .title h2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 140px;
-    color:  rgb(7, 28, 31);
-    font-size: 50px;
-  }
-
-  .title2 h2{
+  .title2 h2 {
     justify-content: right;
   }
 
-  .title p{
-    position: relative;
-    font-family: "Roboto", sans-serif;
-    margin: 30px 30px 0px 0px;
-    color: rgba(0, 0, 0, 0.541);
-    line-height: 25px;
+  .title p {
+    margin: 10px 20px 0px 0px;
+    line-height: 20px;
   }
 
-  .title p::before{
-    content: "";
-    position: absolute;
-    right: -30px;
-    top: 0px;
-    width: 1px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.219);
+  .title p::before {
+    right: -20px;
+    max-height: 80px;
   }
 
-.offer h2{
-    color: orange;
-    font-size: 40px;
-    border: 2px solid ;
-    padding: 4px;
-    border-radius: 3px;
-    animation: offer 3s infinite ease-in-out;
+  .content_text button {
+    margin: 25px 0px;
+    padding: 12px 20px;
+    font-size: 19px;
   }
 
-  @keyframes offer{
-    50%{
-      transform: scale(.6);
-    }
-    100%{
-      transform: scale(1);
-    }
-  
+  .banner_img img {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero_banner {
+    padding: 50px 15px 20px 15px;
   }
 
-  .content_text button{
-    position: relative;
-    margin: 30px 0px;
-    border: 1px solid white;
-    border-radius: 3px;
-    outline: none;
-    background-color: var(--btn-background-color);
-    color: white;
-    padding: 12px 25px;
+  .banner_1_container,
+ .banner_2_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+  .content_text h1 {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+
+
+  .title h5 {
+    margin: 15px 0px;
+  }
+
+  .title h2 {
     font-size: 20px;
-    cursor: pointer;
-    transition: .8s;
-    z-index: 1;
-
   }
 
-  .content_text button::before{
-    content: "";
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    width: 0;
-    height: 100%;
-    color: var(--btn-color);
-    transition: .5s;
-    color: rgb(3, 19, 16);
-    background-color: rgb(108, 216, 202);
-    border-radius: 3px;
+  .title2 h2 {
+    justify-content: right;
   }
 
-  .content_text button:hover::before{
-    width: 100%;
-    z-index: -1;
-  }
-  
-
-  .content_img{}
-  .content_img img{
-    /* max-width: 90%; */
+  .title p {
+    margin: 10px 20px 0px 0px;
+    line-height: 20px;
   }
 
+  .title p::before {
+    right: -20px;
+    max-height: 80px;
+  }
+
+  .content_text button {
+    margin: 25px 0px;
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+
+  .banner_img img {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner_img img {
+    max-width: 80%;
+  }
+}

@@ -14,70 +14,66 @@ import Best_Selling_Products from "../../Components/Best_Selling_Products/Best_S
 
 function Home() {
   const settings = {
-    dots: true,
-    fade: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 3,
-    waitForAnimate: false,
+    // dots: true,
+    // infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+    pauseOnHover: true,
   };
   return (
     <div className={styles.slider_container}>
-        <div className={styles.home_section}>
-      <Slider {...settings}>
+      <div className={styles.home_section}>
+        <Slider {...settings}>
           <div className={styles.hero_banner}>
-          <div className={styles.banner_1_container}>
-            <div className={styles.content_text}>
-              <h1>
-                Wellcome to your Trust Farms !
-              </h1>
+            <div className={styles.banner_1_container}>
+              <div className={styles.content_text}>
+                <h1>Wellcome to your Trust Farms !</h1>
 
-              <div className={styles.title}>
-                <h5>100% Genuine Products.</h5>
-                <h2>
-                  Tasty & Health <br /> Organic Foods.
-                  <div className={styles.offer}>
-                    <h2>20% OFF!</h2>
-                  </div>
-                </h2>
-                <button>Shop Now</button>
+                <div className={styles.title}>
+                  <h5>100% Genuine Products.</h5>
+                  <h2>
+                    Tasty & Health <br /> Organic Foods.
+                    <div className={styles.offer}>
+                      {/* <h2>20% OFF!</h2> */}
+                    </div>
+                  </h2>
+                  <button>Shop Now</button>
+                </div>
+              </div>
+              <div className={styles.banner_img}>
+                <img src={banner_1} alt="" />
               </div>
             </div>
-            <div className={styles.content_img}>
-              <img src={banner_1} alt="" />
-            </div>
-          </div>
           </div>
           <div className={styles.hero_banner}>
-          <div className={styles.banner_1_container}>
-          <div className={styles.content_img}>
-              <img src={banner_2} alt="" />
-            </div>
-            <div className={`${styles.content_text} ${styles.content_text2}`}>
-              <div className={`${styles.title} ${styles.title2}`}>
-                <h5>100% Natural Products.</h5>
-                <h2>
-                  Our Garden's Most <br /> Favorite Foods
-                  {/* <div className={styles.offer}>
-                    <h2>20% OFF!</h2>
-                  </div> */}
-                </h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta <br /> numquam sequi maiores blanditiis ex autem</p>
-                <button>Explore Products</button>
+            <div className={styles.banner_1_container}>
+              <div className={styles.banner_img}>
+                <img src={banner_2} alt="" />
+              </div>
+              <div className={`${styles.content_text} ${styles.content_text2}`}>
+                <div className={`${styles.title} ${styles.title2}`}>
+                  <h5>100% Natural Products.</h5>
+                  <h2>
+                    Our Garden's Most <br /> Favorite Foods
+                  </h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dicta <br /> numquam sequi maiores blanditiis ex autem
+                  </p>
+                  <button>Explore Products</button>
+                </div>
               </div>
             </div>
-            
           </div>
-        </div>
-       
-      </Slider>
+        </Slider>
 
-            <VF_Offer_Products />
-            <Fruits_products />
+        {/* <VF_Offer_Products />
+            <Fruits_products /> */}
 
-            {/* <Best_Selling_Products /> */}
-        </div>
+        {/* <Best_Selling_Products /> */}
+      </div>
     </div>
   );
 }
