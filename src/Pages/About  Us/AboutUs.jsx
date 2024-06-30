@@ -81,6 +81,8 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
+
+        
         <div className={`${styles.about_content} ${styles.why_choose_us}`}>
           <div className={styles.title}>
             <p>|| FEATURES ||</p>
@@ -130,6 +132,8 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+
+
         <div className={`${styles.about_content} ${styles.team_members}`}>
           <div className={styles.team_member_title}>
             <h1>Team Members</h1>

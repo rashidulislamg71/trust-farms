@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 
@@ -13,19 +14,20 @@ import VF_Offer_Products from "../../Components/VF_Offer_Products/VF_Offer_Produ
 import Best_Selling_Products from "../../Components/Best_Selling_Products/Best_Selling_Products";
 
 function Home() {
-  const settings = {
-    // dots: true,
-    // infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 3000,
-    pauseOnHover: true,
-  };
+ 
+  // const settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 3000,
+  //   pauseOnHover: true,
+  // };
   return (
     <div className={styles.slider_container}>
       <div className={styles.home_section}>
-        <Slider {...settings}>
+        {/* <Slider {...settings}> */}
           <div className={styles.hero_banner}>
             <div className={styles.banner_1_container}>
               <div className={styles.content_text}>
@@ -34,12 +36,12 @@ function Home() {
                 <div className={styles.title}>
                   <h5>100% Genuine Products.</h5>
                   <h2>
-                    Tasty & Health <br /> Organic Foods.
+                    Tasty & Health  Organic <br />Foods.
                     <div className={styles.offer}>
                       {/* <h2>20% OFF!</h2> */}
                     </div>
                   </h2>
-                  <button>Shop Now</button>
+                  <a href="#fruits_products"> <button>Shop Now</button></a>
                 </div>
               </div>
               <div className={styles.banner_img}>
@@ -47,7 +49,9 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className={styles.hero_banner}>
+
+
+          {/* <div className={styles.hero_banner}>
             <div className={styles.banner_1_container}>
               <div className={styles.banner_img}>
                 <img src={banner_2} alt="" />
@@ -66,11 +70,11 @@ function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </Slider>
+          </div> */}
+        {/* </Slider> */}
 
-        {/* <VF_Offer_Products />
-            <Fruits_products /> */}
+        <VF_Offer_Products />
+            <Fruits_products />
 
         {/* <Best_Selling_Products /> */}
       </div>

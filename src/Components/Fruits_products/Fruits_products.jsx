@@ -31,7 +31,7 @@ const Fruits_products = () => {
   };
 
   return (
-    <section className={styles.fruits_products_styles}>
+    <section id="fruits_products" className={styles.fruits_products_styles}>
       <div className={styles.fruits_products_styles}>
         <div className={styles.fruits_container}>
           <div className={styles.fruits_title}>
