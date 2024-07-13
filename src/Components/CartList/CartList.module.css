@@ -293,8 +293,6 @@ b {
 /*Responsive CSS*/
 
 @media (max-width: 1024px) {
- 
-
   .ShoppingCart_container {
     padding: 120px 30px;
   }
@@ -356,8 +354,6 @@ b {
 }
 
 @media (max-width: 768px) {
- 
-
   .ShoppingCart_container {
     padding: 100px 30px;
   }
@@ -374,7 +370,6 @@ b {
   .loved_ones_gift_text,
   .cart_DeleteAll_and_order_now_btn {
     width: 100%;
-    
   }
 
   /* All shopping content */

@@ -1,5 +1,7 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-no-undef */
+// /* eslint-disable react/prop-types */
+// /* eslint-disable no-unused-vars */
 import { useState, useRef, useContext } from "react";
 import styles from "./Navigation.module.css";
 import CartList from "../../CartList/CartList";
@@ -17,11 +19,14 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import auth from "./../../../Firebase/Firebase.Config";
 import Swal from "sweetalert2";
+import { useEffect } from "react";
 
 const Navigation = () => {
   const { count } = useContext(GlobalContext);
   // Sign up user
   const [user] = useAuthState(auth);
+  const navRef = useRef();
+  const [showMenu, setShowMenu] = useState(false);
 
   //Logout Function
   const logOut = () => {
@@ -32,12 +37,9 @@ const Navigation = () => {
       title: "LogOut Successfuly",
       showConfirmButton: false,
       width: 300,
-      timer: 1500
+      timer: 1500,
     });
   };
-
-  const navRef = useRef();
-  const [showMenu, setShowMenu] = useState(false);
 
   const showNavBar = () => {
     setShowMenu(!showMenu);
