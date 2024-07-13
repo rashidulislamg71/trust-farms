@@ -1,0 +1,127 @@
+
+
+/* Google font Rajdhani*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+
+:root{
+    --main-color: rgb(128, 181, 24);
+    --Icon-background-color: #ffff;
+}
+
+.search_account_cart_container{
+    position: relative;
+
+}
+
+.search_account_cart_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+    font-size: 22px;
+    background-color: var(--Icon-background-color);
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchIcon{
+    color: var(--main-color) ;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border: 1px solid ;
+    border-radius: 5px 0px;
+    padding: 3px;
+    
+}
+
+.search input[type="search"]{
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.527);
+    padding: 4px;
+    color: rgba(0, 0, 0, 0.548);
+    max-width: 500px;
+}
+
+.cartAndAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.account_section{
+    position: relative;
+}
+
+.account{
+    font-size: 30px;
+    width: 48px;
+}
+
+.dropdown_menu_container{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+}
+
+.dropdown_menu_inner_content{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+
+}
+
+.dropdown_menu_inner_content a{
+    font-family: "Rajdhani", sans-serifr;
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    line-height: 30px;
+    transition: all .3s ease;
+}
+
+.dropdown_menu_inner_content a:hover{
+    color: rgb(128, 181, 0);
+}
+
+.addToCart, .account{
+    position: relative;
+    color: var(--main-color) ;
+    background-color: rgb(238, 240, 229);
+    padding: 5px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.addToCart:hover, .account:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.addToCart p b{
+    color: rgba(19, 20, 20, 0.87);
+    font-size: 20px;
+}
+
+
+
+@media  only screen and (max-width: 1024px) {
+    .searchAndCart{
+        padding: 15px 10px;
+    }
+}

@@ -1,0 +1,227 @@
+/* Google Font Fjalla */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+/* Google Font Rajdhani */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+.contact_us_container {
+  padding-top: 65px;
+  font-family: "Rajdhani", sans-serif;
+  background-color: #ffff;
+}
+
+.contact_us_inner_content {
+}
+
+.contact_us_banner {
+  background-image: linear-gradient(
+      rgba(5, 43, 46, 0.774) 51%,
+      rgba(38, 43, 40, 0.856) 100%
+    ),
+    url("../../assets/Images/contact_us_banner_img/Contact-us_banner3.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 170px 0px;
+  text-align: center;
+  color: #ffffffdc;
+  font-family: sans-serif;
+}
+
+.contact_us_banner h1 {
+  font-size: 30px;
+  border-bottom: 1px solid rgba(56, 55, 55, 0.288);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.contact_us_banner h2 {
+  line-height: 40px;
+}
+
+.contact_us_title {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(85, 122, 122, 0.199);
+  padding: 0px 30px;
+  margin-top: 50px;
+  font-size: 26px;
+}
+
+.contact_form_container {
+  padding: 30px;
+}
+
+.contact_form_inner_content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact_form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  /* box-shadow:  3px 3px 10px rgb(197, 191, 191); */
+  position: relative;
+  font-family: "Fjalla", sans-serif;
+}
+
+.contact_form::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  height: 280px;
+  width: 5px;
+  border-radius: 1px;
+  background-color: #318875c2;
+}
+.contact_form::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  height: 5px;
+  width: 300px;
+  border-radius: 1px;
+  background-color: #318875c2;
+}
+
+.contact_form form {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: max-content 1fr;
+}
+
+.contact_form label {
+  grid-column: 1;
+  text-align: left;
+  font-weight: bold;
+}
+
+.contact_form input[type="text"],
+.contact_form input[type="email"],
+.contact_form input[type="number"],
+.contact_form textarea,
+.contact_form select {
+  grid-column: 2;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.contact_form textarea {
+  resize: vertical;
+}
+
+.contact_form button {
+  max-width: 100%;
+  background-color: #0caf8c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.4s;
+}
+
+.contact_form button:hover {
+  background-color: #0a886d;
+  box-sizing: 2px 2px 10px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+  .contact_us_container {
+    padding-top: 50px;
+  }
+  .contact_us_banner {
+    background-size: cover;
+    padding: 100px 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact_us_container {
+    padding-top: 50px;
+  }
+
+  .contact_us_banner {
+    background-size: cover;
+    padding: 100px 0px;
+  }
+
+  .contact_us_banner h1 {
+    font-size: 25px;
+    margin-bottom: -30px;
+  }
+
+  .contact_us_banner h2 {
+    font-size: 20px;
+  }
+
+  .contact_form form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact_us_container {
+    padding-top: 60px;
+  }
+
+  .contact_us_title {
+    margin-top: 40px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .contact_us_banner {
+    background-size: cover;
+    padding: 60px 0px;
+  }
+
+  .contact_us_banner h1 {
+    font-size: 25px;
+    margin-bottom: -30px;
+  }
+
+  .contact_us_banner h2 {
+    font-size: 20px;
+  }
+  .contact_form_container {
+    padding: 5px;
+  }
+
+  .contact_form {
+    padding: 0px;
+    margin-top: 20px;
+  }
+
+  .contact_form label {
+    grid-column: 1;
+    margin-bottom: -15px;
+  }
+  
+  .contact_form input[type="text"],
+  .contact_form input[type="email"],
+  .contact_form input[type="number"],
+  .contact_form textarea,
+  .contact_form select {
+    grid-column: 1;
+   
+  }
+  .contact_form_inner_content {
+    padding: 0px 10px 10px 10px;
+  }
+
+  .contact_form::before {
+    display: none;
+  }
+  .contact_form::after {
+    display: none;
+  }
+}

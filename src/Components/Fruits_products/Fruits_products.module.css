@@ -1,0 +1,295 @@
+/* Google Font Fjalla */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+/* Google Font Rajdhani */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --fruits-product-bg-color-white: #fff;
+  --cart-img-bg-color-gray: rgba(138, 137, 137, 0.116);
+  --cart-name-and-price-bg-color-white: #ffff;
+  --cart-color-black: rgba(0, 0, 0, 0.911);
+  --cart-offer-color-white: #ffff;
+  --cart-offer-bg-color-green: rgba(127, 181, 0, 0.938);
+  /* --add-to-cart-btn-color:green; */
+  --fruit-price-color: rgba(127, 181, 0, 0.938);
+  --cart-font-family: "Rajdhani", sans-serif;
+  --genaral-font-family: "Inter", sans-serif;
+}
+
+.fruits_products_styles {
+  padding: 60px 40px 20px 40px;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.fruits_container {
+  margin: 0 auto;
+}
+
+.fruits_title {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--cart-color-black);
+  font-family: var(--cart-font-family);
+  margin-bottom: 40px;
+  background: rebeccapurple;
+  color: #fff;
+  border-radius: 1px;
+}
+
+.fruits_inner_content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 30px;
+  place-content: center;
+}
+
+.fruits_cart {
+  border: 1px solid rgba(128, 128, 128, 0.116);
+  border-radius: 1px;
+  text-align: center;
+  font-family: var(--cart-font-family);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.5s;
+  width: fit-content;
+}
+
+.fruits_cart:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fruits_cart_top {
+  background-color: var(--cart-img-bg-color-gray);
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+  width: 270px;
+  text-align: center;
+}
+
+.fruits_cart_top:hover {
+  cursor: pointer;
+}
+
+.fruits_cart_top .cart_offer {
+  font-family: var(--genaral-font-family);
+  max-width: fit-content;
+  background-color: var(--cart-offer-bg-color-green);
+  color: var(--cart-offer-color-white);
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.fruits_cart_top .cart_img {
+}
+.fruits_cart_top .cart_img img {
+  height: 160px;
+  /* width: auto; */
+}
+
+.addToCart_like_shear_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.addToCart_like_shear_btn > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(19, 16, 20);
+  transition: 0.5s;
+  box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.849);
+}
+
+.addToCart_like_shear_btn button span{
+  color: rgb(206, 34, 114);
+  display: flex;
+}
+
+.addToCart_like_shear_btn > button:hover {
+  background-color: var(--cart-offer-bg-color-green);
+}
+
+.fruits_cart:hover .addToCart_like_shear_btn {
+  visibility: visible;
+  opacity: 1;
+  top: 60%;
+}
+
+.fruits_cart_bottom {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.fruits_cart_bottom .fruit_name {
+  transition: 0.5s;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 17px;
+  color: rgba(51, 49, 49, 0.808);
+}
+
+.fruits_cart_bottom .fruit_name:hover {
+  color: rgb(36, 184, 171);
+}
+
+.fruits_cart_bottom .fruit_price {
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--fruit-price-color);
+}
+
+.fruits_cart_bottom .comment_btn button {
+  background-color: var(--fruit-price-color);
+  padding: 3px;
+  width: 100%;
+  border-radius: 2px;
+  color: var(--cart-offer-color-white);
+  font-weight: bold;
+  font-size: 17px;
+  font-family: var(--cart-font-family);
+  border: none;
+  outline: none;
+  margin: 5px 0px 0px 0px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* .fruits_cart_bottom .comment_btn button span{
+  margin-top: 3px;
+  color: rgb(2, 36, 20);
+  transition: .3s;
+}
+
+.fruits_cart_bottom .comment_btn button:hover span{
+  color: rgb(255, 255, 255);
+} */
+
+.fruits_cart_bottom .comment_btn button:hover,
+.fruits_cart_bottom .like_shear_opinion_btn button:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.507);
+  background-color: rgba(103, 167, 7, 0.911);
+}
+
+/** Responsive CSS Start**/
+
+@media only screen and (max-width: 1024px) {
+  .fruits_products_styles {
+    padding: 20px 10px;
+  }
+
+  .fruits_title {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+  
+  .fruits_container {
+    margin: 0 auto;
+  }
+  
+
+  .fruits_inner_content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .fruits_cart_top {
+    padding: 15px;
+    height: 200px;
+    width: 220px;
+  }
+
+  .fruits_cart_top .cart_img img {
+    height: 120px;
+  }
+
+  .fruits_cart_bottom {
+    padding: 12px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .fruits_products_styles {
+    padding: 35px 10px 20px 10px;
+  }
+
+  .fruits_container {
+    margin: 0 auto;
+  }
+  
+
+  .fruits_title {
+    font-size: 17px;
+    margin-bottom: 25px;
+  }
+
+  .fruits_inner_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fruits_cart_top {
+    padding: 15px;
+    height: 120px;
+    width: 150px;
+  }
+
+  .fruits_cart_top .cart_img img {
+    height: 95px;
+  }
+
+  .addToCart_like_shear_btn {
+    gap: 10px;
+  }
+
+  .addToCart_like_shear_btn > button {
+    font-size: 17px;
+  }
+
+  .fruits_cart_bottom {
+    padding: 12px;
+  }
+
+  .fruits_cart_bottom {
+    padding: 10px;
+  }
+
+  .fruits_cart_bottom .fruit_name {
+    font-size: 16px;
+  }
+
+  .fruits_cart_bottom .fruit_price {
+    font-size: 17px;
+  }
+
+  .fruits_cart_bottom .comment_btn button {
+    border-radius: 1px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+/** Responsive CSS End**/

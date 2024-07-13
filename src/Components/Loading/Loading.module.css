@@ -1,0 +1,30 @@
+
+
+.loading_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 100px;
+  }
+  
+  .loading_spinner{
+    border: 3px solid #ddece9;
+    border-top: 3px solid #68c22cc5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    
+  }
+  p{
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

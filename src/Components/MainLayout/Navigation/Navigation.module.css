@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lugrasimo&family=Pattaya&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --main-font: "Rajdhani", sans-serif;
+  --main-color: rgba(0, 0, 0, 0.863);
+  --logo-color1: rgb(36, 117, 54);
+  --logo-color2: rgb(61, 68, 51);
+  --account-color: rgb(14, 172, 159);
+  --nav-background-color: rgba(177, 194, 194, 0.342);
+}
+
+#navigation {
+  position: relative;
+}
+
+.Navigation_Styles {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background-color: var(--nav-background-color);
+  color: var(--main-color);
+  box-shadow: 3px 3px 10px rgb(177, 209, 218);
+}
+
+.navBar_logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(3, 18, 22, 0.979);
+  font-size: 18px;
+  font-family: var(--main-font);
+  font-weight: bold;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0px;
+  width: 0%;
+  height: 2px;
+  background-color: rgba(29, 49, 42, 0.432);
+  transition: all 0.5s ease;
+}
+
+.menu a:hover::before {
+  width: 100%;
+  background-color: rgb(159, 202, 58);
+}
+
+.menu a:hover {
+  color: green;
+}
+
+a.active {
+  color: rgb(128, 181, 0);
+  border-bottom: 2px solid rgb(128, 181, 0);
+}
+
+.cartAndAccount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.account_container {
+  position: relative;
+  width: 100px;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.account {
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(25, 152, 152);
+  border: 1px solid #ffff;
+  padding: 6px 0px;
+  border-radius: 2px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.account_inner_content {
+  background-color: white;
+  position: absolute;
+  top: 110%;
+  left: 0px;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+.account_container:hover .account_inner_content {
+  opacity: 1;
+  z-index: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+.account_dropdown a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid gray;
+  transition: all 0.5s ease;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+/* .account_dropdown:last-child a {
+  border-bottom: none;
+} */
+
+.account_dropdown a:hover {
+  color: green;
+  background-color: rgba(188, 226, 226, 0.733);
+}
+
+.addToCart a{
+  position: relative;
+  color: var(--main-color);
+  /* background-color: rgb(238, 240, 229); */
+  padding: 2px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 22px;
+  text-decoration: none;
+
+}
+
+.addToCart a:hover sup,
+.account:hover {
+  background-color: rgb(135, 186, 16);
+  color: #fff;
+}
+
+.addToCart a p sup {
+  color: #fff;
+  font-size: 17px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  height: 18px;
+  width: 18px;
+  background: rgb(25, 152, 152);
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  transition: .3s;
+  
+}
+
+.navBtn {
+  display: none;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: var(--account-color);
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1024px) {
+  .Navigation_Styles {
+    padding: 0px 0px;
+  }
+
+  .navBar {
+    padding: 5px 40px;
+  }
+
+  .menu {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    height: fit-content;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.5s;
+    transform: translateX(100%);
+    background-color: rgba(50, 133, 137, 0.836);
+    z-index: 100;
+  }
+
+  .menu a {
+    font-size: 20px;
+  }
+
+  .responsive_nav {
+    transform: translateX(0);
+  }
+
+  .cartAndAccount {
+    gap: 20px;
+  }
+
+  .account {
+    padding: 3px 0px;
+  }
+
+  .addToCart {
+    font-size: 20px;
+  }
+
+  .navBtn {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: #289fbd;
+    color: rgb(6, 24, 44);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Navigation_Styles {
+    padding: 0px 0px;
+  }
+
+  .navBar {
+    padding: 10px 10px;
+  }
+
+  .cartAndAccount {
+    gap: 15px;
+  }
+
+  .account {
+    font-size: 18px;
+    padding: 3px 8px;
+    margin-left: 20px;
+    border-color: #ffffff77;
+  }
+
+  .account_dropdown a {
+    padding: 8px;
+  }
+
+  .addToCart {
+    padding: 2px;
+    font-size: 20px;
+  }
+
+  .addToCart p sup {
+    font-size: 18px;
+  }
+
+  .navBar {
+    box-shadow: 3px 3px 10px rgb(177, 209, 218);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Navigation_Styles {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .navBar_logo {
+    font-size: 18px;
+  }
+
+  .menu {
+    gap: 20px;
+    z-index: 1;
+  }
+
+  .cartAndAccount {
+    gap: 10px;
+  }
+
+  .account_container {
+    width: auto;
+  }
+
+  .account {
+    font-size: 17px;
+  }
+
+  .addToCart {
+    padding: 2px;
+    font-size: 17px;
+  }
+
+  .addToCart p sup {
+    font-size: 16px;
+  }
+
+  .navBtn {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navBar_logo {
+    font-size: 16px;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+
+  .cartAndAccount {
+    gap: 5px;
+  }
+
+  .account {
+    font-size: 15px;
+  }
+
+  .addToCart {
+    font-size: 15px;
+  }
+
+  .addToCart p sup {
+    font-size: 14px;
+  }
+
+  .navBtn {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,52 @@
+.signup_container {
+}
+
+.social_inner_content {
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.facebook button,
+.google button {
+  padding: 5px 10px;
+  width: 120px;
+  cursor: pointer;
+  color: #ffff;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.facebook button {
+  background-color: rgb(8, 102, 255);
+  padding: 6px 10px;
+}
+
+.google button {
+  background-color: rgb(204, 157, 27);
+}
+
+.facebook button:hover,
+.google button:hover {
+  box-shadow: 2px 2px 15px rgb(59, 58, 58);
+}
+.facebook button span,
+.google button span {
+  font-size: 17px;
+}
+
+.google button span {
+  font-size: 20px;
+}
+
+.or {
+  margin: 30px 0px;
+}
+
+

@@ -1,0 +1,164 @@
+/*Google Font Rajdhani and sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+/* Vegetables offer css start */
+.VF_Offer_Products {
+    padding: 60px;
+  }
+  
+  .vegetables_and_fruits_offer_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .vegetables_offer_container {
+    background-color: rgb(221, 241, 213);
+  }
+  /* Vegetables offer css end */
+  
+  /* Fruits offer css start */
+  .fruits_offer_container {
+    background-color: rgba(252, 156, 169, 0.925);
+  }
+  /* Fruits offer css end */
+  
+  /* Common offer css start */
+  .vegetables_offer_container,
+  .fruits_offer_container {
+    width: calc(50% - 15px);
+  }
+  
+  .vegetables_offer_inner_content,
+  .fruits_offer_inner_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 40px;
+    transition: all 0.4s ease;
+    height: 330px;
+  }
+  
+  .text h3 {
+    color: rgb(91, 139, 27);
+    font-weight: 500;
+  }
+  
+  .text h2 {
+    margin: 15px 0;
+    line-height: 25px;
+    color: rgba(15, 55, 63, 0.952);
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  
+  .text h5 {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: rgb(2, 2, 2);
+  }
+  
+  .text a button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #04bb50;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 1px;
+    transition: all 0.5s ease;
+  }
+  
+  .image {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image img {
+    height: 200px;
+    width: 250px;
+  }
+  /* Common offer css end */
+  
+  
+  /* Hover part css start */
+  .text a button:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.39);
+  }
+  /* Hover part css end */
+  
+
+
+
+  
+  /* Responsive design css start */
+  @media only screen and (max-width: 1024px) {
+    .VF_Offer_Products {
+      padding: 30px 15px;
+    }
+  
+    .vegetables_and_fruits_offer_container {
+      gap: 20px;
+    }
+  
+    .vegetables_offer_container,
+    .fruits_offer_container {
+      width: 100%;
+    }
+  
+    .vegetables_offer_inner_content,
+    .fruits_offer_inner_content {
+      padding: 20px 0px 20px 20px;
+      height: 280px;
+    }
+  
+    .image img {
+      height: 130px;
+      width: 140px;
+    }
+
+  
+
+  }
+  
+  @media only screen and (max-width: 720px) {
+    .VF_Offer_Products {
+      padding: 40px 15px;
+    }
+  
+    .vegetables_and_fruits_offer_container {
+      flex-direction: column;
+    }
+  
+    .vegetables_offer_container,
+    .fruits_offer_container {
+      width:100%;
+      height: 350px ;
+    }
+  
+    .vegetables_offer_inner_content,
+    .fruits_offer_inner_content {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+  
+    .text {
+      text-align: center;
+    }
+  
+    .text h2 {
+      font-size: 20px;
+    }
+  
+    .image img {
+      height: 100px;
+      width: 120px;
+    }
+  }
+  /* Responsive design css end */

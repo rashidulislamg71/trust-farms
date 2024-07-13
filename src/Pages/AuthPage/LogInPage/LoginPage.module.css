@@ -1,0 +1,170 @@
+
+/**Google Font Rajdhani**/
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+
+.signInPageParent {
+    margin: 0 auto;
+    padding: 130px 0px 50px 0px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    font-family: "Rajdhani", sans-serif;
+}
+
+/* .signInForm img {
+    height: 610px;
+    width: 630px;
+    box-shadow: 3px 3px 20px rgb(153, 150, 150);
+    opacity: 0.8;
+    border-radius: 4px;
+    outline: 1px solid rgb(133, 221, 221);
+    outline-offset: 7px;
+} */
+
+
+
+.signInForm {
+    margin: 0px 0;
+    padding: 20px;
+    border-radius: 4px;
+    width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.signInForm .title h1 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(164, 205, 66);
+}
+
+.signInForm hr {
+    margin: 17px 0px 10px 0px;
+    color: rgba(184, 182, 182, 0);
+}
+
+.haveAccountLogIn {
+    font-size: 20px;
+    margin: 20px 0px 40px 0px;
+}
+
+.haveAccountLogIn p a{
+    text-decoration: none;
+}
+
+.haveAccountLogIn p span {
+    font-size: 21px;
+    color:rgb(152, 125, 221);
+    cursor: pointer;
+    transition: .4s;
+    margin-left: 5px;
+
+}
+
+.haveAccountLogIn p span:hover {
+    color: #0654ad;
+    text-decoration: underline;
+}
+
+
+input#emailLogIn,
+input#passwordLogIn
+{
+    width: 100%;
+    padding: 6px 0px;
+    margin: 0px 0px 10px 0px;
+    border: none;
+    outline: none;
+    /* outline-color: rgb(156, 212, 173); */
+    border-bottom: 1px solid rgb(184, 182, 182);
+    font-size: 17px;
+    color: rgb(54, 52, 52);
+}
+
+.submitBtnLogIn button {
+    margin-top: 30px;
+    padding: 6px 10px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .4s;
+    background-color: rgb(25, 152, 152);
+    color: white;
+
+}
+
+.submitBtnLogIn button:hover {
+    background-color: rgb(14, 110, 110);
+    box-shadow: 2px 2px 15px rgb(25, 152, 152);
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 900px) {
+
+    /* .SigUpImage img, */
+    .SignInImage img {
+        display: none;
+    }
+
+    .signInPageInfo{
+      width: 80%;
+    }
+
+    .signInForm .title h1 {
+        font-size: 30px;
+        
+    }
+
+    .haveAccountLogIn {
+        font-size: 18px;
+    }
+
+    .haveAccountLogIn p span {
+        font-size: 22px;
+    }
+    .gitHub .text button,
+    .google .text button
+    {
+        padding: px 5px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        color: rgb(255, 254, 254);
+        cursor: pointer;
+    }
+}
+
+/* Responsive styles for phones */
+@media (max-width: 480px) {
+
+ 
+    .SignInImage img {
+        display: none;
+    }
+
+    .signInForm {
+        width: 100%;
+    }
+
+   
+    .signInPageInfo{
+        width: 100%;
+    }
+
+    .signInForm .title h1 {
+        font-size: 25px;
+        ;
+    }
+
+
+    .haveAccountLogIn {
+        font-size: 16px;
+    }
+
+    .haveAccountLogIn p span {
+        font-size: 20px;
+    }
+}
