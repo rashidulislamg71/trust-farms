@@ -3,41 +3,46 @@
 /* eslint-disable react/jsx-no-undef */
 // /* eslint-disable no-undef */
 
-
 import { Link, useNavigate } from "react-router-dom";
 
 import styles from "./LoginPage.module.css";
 import SignUpWithSocial from "../../../Components/SignUpWithSocial/SignUpWithSoical";
-import Loaging from "../../../Components/Loading/Loaging";
+
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/Firebase.Config";
+import Loading from "../../../Components/Loading/Loading";
+import { useEffect } from "react";
 
 const LoginPage = () => {
-
   const navigate = useNavigate();
 
   const [signInWithEmailAndPassword, user, loading, error] =
-  useSignInWithEmailAndPassword(auth);
+    useSignInWithEmailAndPassword(auth);
+
+    useEffect(()=>{
+      if (user) {
+        navigate("/");
+      }
+    },[user, navigate] );
 
   if (loading) {
-    return <Loaging />;
+    return <Loading />;
   }
 
   const signInHandler = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-   
+
     if (!email || !password) {
       return alert("email or password doesn't match!");
     } else {
       await signInWithEmailAndPassword(email, password);
-      navigate("/")
     }
   };
 
-    return (
-        <div>
+  return (
+    <div>
       <div className={styles.signInPageParent}>
         <div className={styles.signInPageInfo}>
           <div className="motivation">
@@ -81,8 +86,7 @@ const LoginPage = () => {
                 />{" "}
                 <br />
                 {error ? (
-                  <p style={{ color: "red" }}>
-                    Email or Password does not match!
+                  <p style={{ color: "red" }}>Email or Password does not match!
                   </p>
                 ) : (
                   ""
@@ -97,15 +101,7 @@ const LoginPage = () => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default LoginPage;
-
-
-
-
-
-
-
-

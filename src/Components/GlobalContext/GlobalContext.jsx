@@ -1,8 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 
 // React icons
 import { RiShoppingCartFill } from "react-icons/ri";
@@ -42,12 +44,18 @@ import Tomatoes from "..//../assets/Images/Vegetabes img/Tomatoes.png";
 
 //Sweet Alart
 import Swal from "sweetalert2";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "./../../Firebase/Firebase.Config";
+import { useNavigate } from "react-router-dom";
 
 const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
-  //Add To Cart State
-  const [cart, setCart] = useState([]);
+  const [user] = useAuthState(auth); // Login user information
+  const navigate = useNavigate();
+
+  const [cart, setCart] = useState([]); //Add To Cart State
+  const [loading, setLoading] = useState(true); // State to manage loading state
 
   /** Product fo Fruits list  state **/
   const [products, setProducts] = useState([
@@ -388,15 +396,23 @@ const GlobalProvider = ({ children }) => {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: `(1 new items) has been Added to Your Cart `,
+      title: `Added a New Item Cart `,
       showConfirmButton: false,
       timer: 1500,
       width: 360,
     });
   };
 
+  // if the user has, then they can do cart items. without the user can't cart items.
+  const addToCartWithCondition = (product, index) => {
+    if (user) {
+      addToCartHandler(product, index);
+    } else {
+      navigate("/login"); // Redirect to the login page
+    }
+  };
 
-  //Show item to cart Icon
+  //Show item Number to cart Icon
   const count = () => {
     return cart.length;
   };
@@ -482,15 +498,32 @@ const GlobalProvider = ({ children }) => {
     updateVegetabelsLove[index].loved = !updateVegetabelsLove[index].loved;
     setProducts(updateVegetabelsLove);
   };
+ // if the user has, then can do Love items. without the user can't Love items.
+  const toggleLoveHandlerWithCondation = (index) => {
+    if (user) {
+      toggleLoveHandler2(index);
+      toggleLoveHandler(index);
+    } else {
+      navigate("/login");
+    }
+  };
 
+  // Loading Function
+  useEffect(() => {
+    // Simulate loading delay
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Set loading to false after 2 seconds (adjust as needed)
+
+    return () => clearTimeout(timeout); // Cleanup timeout on component unmount
+  }, []);
 
   const contextValue = {
     products,
     vegetables,
     cart,
-    addToCartHandler,
-    toggleLoveHandler,
-    toggleLoveHandler2,
+    addToCartWithCondition,
+    toggleLoveHandlerWithCondation,
     count,
     Increment,
     Decrement,
@@ -500,6 +533,8 @@ const GlobalProvider = ({ children }) => {
     totalQuantity,
     deleteCartItem,
     clearCart,
+    user,
+    loading,
   };
 
   return (

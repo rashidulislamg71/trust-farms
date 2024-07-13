@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import auth from "./../../../Firebase/Firebase.Config";
+import Swal from "sweetalert2";
 
 const Navigation = () => {
   const { count } = useContext(GlobalContext);
@@ -25,6 +26,14 @@ const Navigation = () => {
   //Logout Function
   const logOut = () => {
     signOut(auth);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "LogOut Successfuly",
+      showConfirmButton: false,
+      width: 300,
+      timer: 1500
+    });
   };
 
   const navRef = useRef();
@@ -112,7 +121,7 @@ const Navigation = () => {
                       //   color: "rgb(254, 94, 1)",
                       // }}
                     >
-                     <Link> {user?.displayName} </Link>
+                      <Link> {user?.displayName} </Link>
                     </div>
                   </>
                 ) : (
@@ -125,7 +134,7 @@ const Navigation = () => {
 
                 {user ? (
                   <div onClick={logOut} className={styles.account_dropdown}>
-                    <Link to="/login">LogOut</Link>
+                    <Link>LogOut</Link>
                   </div>
                 ) : (
                   <>
@@ -141,7 +150,7 @@ const Navigation = () => {
                 <p>
                   <RiShoppingCartFill />
 
-                  <sup>{count()}</sup>
+                  <sup>{user ? count() : 0}</sup>
                 </p>
               </NavLink>
             </div>

@@ -1,7 +1,9 @@
-.signup_container {
-}
 
-.social_inner_content {
+/* SweetAlert styles*/
+.custom-swal .swal2-popup {
+  width: 300px !important; 
+  height: 200px !important;
+  font-size: 20px !important;
 }
 
 .flex {

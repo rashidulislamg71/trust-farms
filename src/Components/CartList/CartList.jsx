@@ -21,7 +21,7 @@ const CartList = () => {
     Decrement,
     deleteCartItem,
     clearCart,
-    DeletAlart,
+    user,
   } = useContext(GlobalContext);
 
   // Delete and Alart box function
@@ -80,44 +80,62 @@ const CartList = () => {
                   Your total:<b>{totalPrice} TK</b>
                 </p>
               </div>
-              {cart.length ? (
-                cart.map((cartItem, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className={`${styles.flex} ${styles.single_shoppingCart_details}`}
-                    >
-                      <img src={cartItem.url} alt={cartItem.name} />
-                      <b>{cartItem.name}</b>
-                      <div className={`${styles.flex} ${styles.quantity_btn}`}>
-                        <button onClick={() => Decrement(index)}>-</button>
-                        <p>
-                          {cartItem.quantity} {cartItem.weight}
-                        </p>
-                        <button onClick={() => Increment(index)}>+</button>
-                      </div>
-                      <b>{cartItem.price} TK.</b>
-                      <button
-                        title="Remove Item"
-                        className={`${styles.flex} ${styles.remove_btn}`}
-                        onClick={() => deletAlartHandler(index)}
+              {user ? (
+                cart.length ? (
+                  cart.map((cartItem, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className={`${styles.flex} ${styles.single_shoppingCart_details}`}
                       >
-                        <MdDeleteOutline />
-                      </button>
-                    </div>
-                  );
-                })
+                        <img src={cartItem.url} alt={cartItem.name} />
+                        <b>{cartItem.name}</b>
+                        <div
+                          className={`${styles.flex} ${styles.quantity_btn}`}
+                        >
+                          <button onClick={() => Decrement(index)}>-</button>
+                          <p>
+                            {cartItem.quantity} {cartItem.weight}
+                          </p>
+                          <button onClick={() => Increment(index)}>+</button>
+                        </div>
+                        <b>{cartItem.price} TK.</b>
+                        <button
+                          title="Remove Item"
+                          className={`${styles.flex} ${styles.remove_btn}`}
+                          onClick={() => deletAlartHandler(index)}
+                        >
+                          <MdDeleteOutline />
+                        </button>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <>
+                
+                  <p
+                    className={`${styles.no_cart_item} ${styles.single_shoppingCart_details}`}
+                  >
+                    {" "}
+                    No cart item was found{" "}
+                    <Link to="/fruits">
+                      <button>Go to Shopping</button>
+                    </Link>
+                  </p>
+                  </>
+                )
               ) : (
-                <p
-                  className={`${styles.no_cart_item} ${styles.single_shoppingCart_details}`}
-                >
-                  {" "}
-                  No cart item was found{" "}
-                  <Link to="/fruits">
-                    <button>Go to Shopping</button>
-                  </Link>
-                  
-                </p>
+                <>
+                  <p
+                    className={`${styles.no_cart_item} ${styles.single_shoppingCart_details}`}
+                  >
+                    {" "}
+                    No cart item was found{" "}
+                    <Link to="/fruits">
+                      <button>Go to Shopping</button>
+                    </Link>
+                  </p>
+                </>
               )}
 
               <div className={`${styles.flex} ${styles.loved_ones_gift_text}`}>

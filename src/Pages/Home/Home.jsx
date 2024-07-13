@@ -48,7 +48,7 @@ function Home() {
                       {/* <h2>20% OFF!</h2> */}
                     </div>
                   </h1>
-                  <Link to="/vegetables">  <button>Shop Now</button></Link>
+                  <Link to="/all_products">  <button>Shop Now</button></Link>
                 </div>
               </div>
               <div className={styles.banner_img}>

@@ -4,31 +4,46 @@
 
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./SingUp.module.css";
-import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/Firebase.Config";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import SignUpWithSocial from "../../../Components/SignUpWithSocial/SignUpWithSoical";
-import Loaging from "../../../Components/Loading/Loaging";
+
+import Loading from "./../../../Components/Loading/Loading";
 
 const SignUp = () => {
-
   const navigate = useNavigate();
+  const [empty, setEmpty] = useState("");
   // Creating user with email and password
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, {
-      sendEmailVerification: true
+      sendEmailVerification: true,
     });
 
   // Updating profile
   const [updateProfile, updating] = useUpdateProfile(auth);
 
+  useEffect(() => {
+    if (user) {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Your Sign Up Successfuly!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      navigate("/");
+    }
+  }, [user, navigate]);
+
   if (loading) {
-    return <Loaging />;
+    return <Loading />;
   }
 
-  console.log(user)
-  
   const signUpWithEmailPassword = async (e) => {
     e.preventDefault();
 
@@ -38,23 +53,15 @@ const SignUp = () => {
     const confirmPassword = e.target.confirmPassword.value;
 
     if (!username || !email || !password || !confirmPassword) {
-      console.log(`empty`);
+      alert("Empty Filed")
     } else if (password !== confirmPassword) {
-      console.log("Password doesn't match!");
+      setEmpty("Password doesn't match!");
     } else {
       await createUserWithEmailAndPassword(email, password);
-      await updateProfile({ displayName: username });
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Your Sign Up Successfuly!",
-        showConfirmButton: false,
-        timer: 1500
-      });
-      navigate("/");
+      await updateProfile({ displayName: username,});
     }
   };
- 
+
   return (
     <div className={styles.signUpPageParent}>
       <div className={`${styles.signUpPageInfo} ${styles.flex}`}>
@@ -74,18 +81,19 @@ const SignUp = () => {
               </p>
             </div>
           </div>
-          <SignUpWithSocial/>
+          <SignUpWithSocial />
           <div className={styles.formInfo}>
             <form onSubmit={signUpWithEmailPassword}>
               <input
                 className={styles.signUpInput}
                 type="text"
-                placeholder="Full Name"
+               placeholder="Full Name"
                 required
                 name="username"
                 id={styles.fullName}
                 autoFocus
               />
+            
               <br />
               <input
                 className={styles.signUpInput}
@@ -114,6 +122,7 @@ const SignUp = () => {
                 id={styles.confirmPassword}
               />
               <br />
+              <p style={{ color: "red" }}>{empty}</p>
               <div className={styles.submitBtn}>
                 <button type="submit">Sign Up</button>
               </div>
