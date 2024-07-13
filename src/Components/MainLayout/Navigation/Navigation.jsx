@@ -27,7 +27,7 @@ const Navigation = () => {
   const logOut = () => {
     signOut(auth);
     Swal.fire({
-      position: "top-end",
+      position: "center",
       icon: "success",
       title: "LogOut Successfuly",
       showConfirmButton: false,

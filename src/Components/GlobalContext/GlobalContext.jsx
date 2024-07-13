@@ -399,7 +399,7 @@ const GlobalProvider = ({ children }) => {
       title: `Added a New Item Cart `,
       showConfirmButton: false,
       timer: 1500,
-      width: 360,
+      width: 300,
     });
   };
 

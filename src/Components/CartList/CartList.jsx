@@ -55,6 +55,7 @@ const CartList = () => {
       if (result.isConfirmed) {
         clearCart();
         Swal.fire("Cleared!", "All items have been deleted.", "success");
+       
       }
     });
   };

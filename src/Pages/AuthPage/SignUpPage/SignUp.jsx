@@ -34,6 +34,7 @@ const SignUp = () => {
         icon: "success",
         title: "Your Sign Up Successfuly!",
         showConfirmButton: false,
+        width: 300,
         timer: 1500,
       });
       navigate("/");
@@ -52,13 +53,36 @@ const SignUp = () => {
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
 
+    const passwordValidation = (password) => {
+      const minLength = 6; // Minmub 6 characters
+      const hasUpperCase = /[A-Z]/.test(password); // An Uppercase Letter
+      const hasLowerCase = /[a-z]/.test(password); // A Lowercase Letter
+      const hasNumber = /\d/.test(password); // A Number
+      const hasSpecialChar = /[!@#$%^&*]/.test(password); // A special character
+
+      if (
+        password.length >= minLength &&
+        hasUpperCase &&
+        hasLowerCase &&
+        hasNumber &&
+        hasSpecialChar
+      ) {
+        return true;
+      }
+      return false;
+    };
+
     if (!username || !email || !password || !confirmPassword) {
-      alert("Empty Filed")
+      alert("Empty Filed");
     } else if (password !== confirmPassword) {
       setEmpty("Password doesn't match!");
+    } else if (!passwordValidation(password)) {
+      setEmpty(
+        "Password must be 6 characters, and uppercase letter, a lowercase letter, a number, and a special character!"
+      );
     } else {
       await createUserWithEmailAndPassword(email, password);
-      await updateProfile({ displayName: username,});
+      await updateProfile({ displayName: username });
     }
   };
 
@@ -87,13 +111,13 @@ const SignUp = () => {
               <input
                 className={styles.signUpInput}
                 type="text"
-               placeholder="Full Name"
+                placeholder="Full Name"
                 required
                 name="username"
                 id={styles.fullName}
                 autoFocus
               />
-            
+
               <br />
               <input
                 className={styles.signUpInput}
@@ -122,6 +146,7 @@ const SignUp = () => {
                 id={styles.confirmPassword}
               />
               <br />
+
               <p style={{ color: "red" }}>{empty}</p>
               <div className={styles.submitBtn}>
                 <button type="submit">Sign Up</button>

@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import styles from "./LoginPage.module.css";
 import SignUpWithSocial from "../../../Components/SignUpWithSocial/SignUpWithSoical";
-
+import Swal from "sweetalert2";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/Firebase.Config";
 import Loading from "../../../Components/Loading/Loading";
@@ -19,11 +19,19 @@ const LoginPage = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
-    useEffect(()=>{
-      if (user) {
-        navigate("/");
-      }
-    },[user, navigate] );
+  useEffect(() => {
+    if (user) {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Login Successfuly!",
+        showConfirmButton: false,
+        width: 300,
+        timer: 1500,
+      });
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   if (loading) {
     return <Loading />;
@@ -86,7 +94,8 @@ const LoginPage = () => {
                 />{" "}
                 <br />
                 {error ? (
-                  <p style={{ color: "red" }}>Email or Password does not match!
+                  <p style={{ color: "red" }}>
+                    Email or Password does not match!
                   </p>
                 ) : (
                   ""
