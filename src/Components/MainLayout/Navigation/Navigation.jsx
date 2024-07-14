@@ -13,7 +13,6 @@ import { NavLink } from "react-router-dom";
 import { RiShoppingCartFill } from "react-icons/ri";
 import { MdAccountBox } from "react-icons/md";
 import { GlobalContext } from "../../GlobalContext/GlobalContext";
-// import {useTheme} from "../../GlobalContext/GlobalContext";
 import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
@@ -52,13 +51,13 @@ const Navigation = () => {
   // const { theme, toggleTheme } = useTheme();
 
   return (
-    <div id="navigation">
+    <div className={styles.navigation}>
       <div className={styles.Navigation_Styles}>
         <div className={styles.navBar}>
           <Logo />
           {/* <button onClick={toggleTheme}>
           {theme ? 'light' : 'Dark'}
-        </button> */}
+         </button> */}
           <nav
             ref={navRef}
             className={`${styles.menu} ${

@@ -10,17 +10,21 @@
   --nav-background-color: rgba(177, 194, 194, 0.342);
 }
 
-#navigation {
+.navigation {
   position: relative;
 }
 
 .Navigation_Styles {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
+  position: relative;
+ 
 }
 
 .navBar {
+  position: fixed;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -201,7 +205,7 @@ a.active {
   }
 
   .navBar {
-    padding: 5px 40px;
+    padding: 8px 40px;
   }
 
   .menu {
