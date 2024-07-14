@@ -25,7 +25,8 @@ Trust Farms is an e-commerce website for selling various types of fruits and veg
     *Passwords are validated for security, ensuring they meet specific criteria.
 
 ### Demo
-    *You can see the live demo of the project Trust-Farms.
+    You can see the live demo of the project Trust-Farms.
+    https://trust-farms.vercel.app/
 
 ### Technologies Used
     *React: JavaScript library for building user interfaces
