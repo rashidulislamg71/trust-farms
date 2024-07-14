@@ -41,7 +41,7 @@ Trust Farms is an e-commerce website for selling various types of fruits and veg
 To run this project locally, follow these steps:
 
 1. Clone the repository:
-git clone https://github.com/your-username/Trust-Farms.git
+git clone https://github.com/rashidulislamg71/Trust-Farms.git
 cd Trust-Farms
 
 2. Install dependencies:
@@ -57,7 +57,7 @@ npm start
 
 ### Usage
 User Sign Up
-    To create a new account, users need to fill out the sign-up form. The form includes fields for username, email, password, and confirm password. The password is validated to ensure it meets security criteria:
+    To create a new account, users need to fill out the sign-up form. The form includes fields for username, email, password, and confirm password. The password is validated to ensure it meets the security criteria:
 
 
 const signUpWithEmailPassword = async (e) => {
